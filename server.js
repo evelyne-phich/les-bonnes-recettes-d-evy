@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const recipeResource = require("./resources/recipeResource");
 
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
@@ -13,12 +14,11 @@ app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
 
 // Accueil
+app.get("/", async (request, response) => {
+  const recipes = await recipeResource.getRecipes();
 
-app.get("/", (request, response) => {
-  response.render("index", {
-    fullName: "Evelyne PHICH",
-    quote: '"Curiosity keeps leading us down new paths."',
-    activePage: "Accueil",
+  return response.render("index", {
+    recipes: recipes,
   });
 });
 
