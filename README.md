@@ -16,3 +16,10 @@
 ```
 > npm run dev
 ```
+
+### Converts an issue to a pull request
+
+```
+> gh api repos/evelyne-phich/les-bonnes-recettes-d-evy/pulls -f head=<branch_name> -f base=main -F issue=<issue_id>
+```
+
