@@ -1,9 +1,9 @@
-const { findAll } = require("../dataAccessObjects/recipeDao");
+const recipeDao = require("../dataAccessObjects/recipeDao");
 
 const getRecipes = async () => {
   let recipes = [];
 
-  recipes = await findAll();
+  recipes = await recipeDao.findAll();
 
   return recipes;
 };
