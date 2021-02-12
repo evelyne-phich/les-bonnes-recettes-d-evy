@@ -11,18 +11,40 @@ header {
   margin: 20px;
   text-shadow: 0 0 10px rgb(182, 7, 65);
 }
+ul {
+  list-style-type: none;
+  padding: 0;
+}
 .searchBar {
   display: flex; 
+}
+.filterButton {
+  width: 56px;
+  height: 56px;
+  border: 3px solid rgb(182, 7, 65);
+  background: rgb(182, 7, 65);
+  color: white;
+  border-radius: 5px 5px 5px 5px;
+  cursor: pointer;
+  font-size: 30px;
+  transition: 0.3s;
+  outline: none;
+}
+.filterButton:hover {
+  background : white;
+  opacity: 0.9;
+  color: rgb(182, 7, 65);
 }
 .search {
   font-size: 18px;
   border: 3px solid rgb(182, 7, 65);
-  border-radius: 5px 0px 0px 5px; 
   border-right: none; 
   padding: 10px;
+  border-radius: 5px 0px 0px 5px;
   background-color: rgb(212, 212, 212);
   color: white;
   outline: none;
+  margin-left: 16px;
 }
 .searchButton {
   width: 56px;
@@ -42,22 +64,6 @@ header {
 }
 .menu {
   display: flex;
-  justify-content: space-between;
-  font-size: 32px;
-}
-.menu .category {
-  background-color: rgb(182, 7, 65);
-  width: 33%;
-  text-align: center;
-  position: relative;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.menu .category:hover {
-  opacity: 0.7;
-}
-ul {
-  list-style-type: none;
 }
 .sideNav {
   height: calc(100vh - 147px);
@@ -73,16 +79,28 @@ ul {
 }
 .sideNav ul li {
   text-align: center;
+}
+.sideNav .category {
+  color: rgb(182, 7, 65);
+  background-color: rgb(214, 214, 214);
+  transition: all 250ms ease;
+}
+.sideNav .category:hover {
+  color: rgb(182, 7, 65);;
+}
+.sideNav button {
   font-size: 32px;
   background-color: rgb(48, 48, 48);
   border-radius: 30px;
   color: white;
   padding: 10px 20px;
   margin: 10px;
+  outline: none;
+  border: none;
+  transition: all 250ms ease;
 }
-.sideNav ul li:hover {
+.sideNav button:hover {
   background-color: white;
-  opacity: 0.8;
   color: black;
   cursor: pointer;
 }
@@ -98,10 +116,15 @@ ul {
     flex-direction: column;
     font-size: 24px;
   }
+  .filterButton {
+    height: 32px;
+    width: 32px;
+    font-size: 18px;
+  }
   .search {
     font-size: 16px;
   }
-  .searchBar {
+  .menu {
     height: 32px;
     margin-top: 20px;
   }
@@ -110,13 +133,6 @@ ul {
     width: 32px;
     font-size: 18px;
   }
-  .menu {
-    font-size: 24px;
-    margin: 2px;
-  }
-  .menu .dropdown .dropdown-content {
-    font-size: 18px;
-  }
-  .sideNavStarters ul li {
+  .sideNav button {
     font-size: 18px;
   }
