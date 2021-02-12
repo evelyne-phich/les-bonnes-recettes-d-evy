@@ -4,7 +4,7 @@
   "description": "les bonnes recettes d'Evy",
   "main": "index.js",
   "scripts": {
-    "test": "node ./scripts/test.js",
+    "test": "npx jest",
     "dev": "nodemon server.js"
   },
   "repository": {
