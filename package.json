@@ -4,8 +4,9 @@
   "description": "les bonnes recettes d'Evy",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "test": "npx jest",
+    "dev": "nodemon server.js",
+    "create-pr": "node ./scripts/issue-to-pr.js"
   },
   "repository": {
     "type": "git",
