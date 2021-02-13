@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const recipeResource = require("./resources/recipeResource");
+const { CATEGORY } = require("./database/recipe");
 
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
@@ -17,8 +18,20 @@ app.set("view engine", "ejs");
 app.get("/", async (request, response) => {
   const recipes = await recipeResource.getRecipes();
 
+  const starterRecipes = recipes.filter(
+    (recipe) => recipe.category === CATEGORY.STARTER
+  );
+  const dishRecipes = recipes.filter(
+    (recipe) => recipe.category === CATEGORY.DISH
+  );
+  const dessertRecipes = recipes.filter(
+    (recipe) => recipe.category === CATEGORY.DESSERT
+  );
+
   return response.render("index", {
-    recipes: recipes,
+    starterRecipes: starterRecipes,
+    dishRecipes: dishRecipes,
+    dessertRecipes: dessertRecipes,
   });
 });
 
