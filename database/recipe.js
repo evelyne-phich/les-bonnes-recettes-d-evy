@@ -7,7 +7,7 @@ const CATEGORY = {
 const COUNTRY = {
   CHINA: "Chinois",
   FRENCH: "Français",
-  UNITED_STATES: "Etats-unis",
+  AMERICAN: "Américain",
 };
 
 const recipes = [
@@ -45,13 +45,13 @@ const recipes = [
     category: CATEGORY.DISH,
     name: "Chili con carne",
     pictureUrl: "",
-    country: COUNTRY.UNITED_STATES,
+    country: COUNTRY.AMERICAN,
   },
   {
     category: CATEGORY.DESSERT,
     name: "Cookies aux pépites de chocolat",
     pictureUrl: "",
-    country: COUNTRY.UNITED_STATES,
+    country: COUNTRY.AMERICAN,
   },
   {
     category: CATEGORY.DESSERT,
@@ -62,5 +62,6 @@ const recipes = [
 ];
 
 module.exports = {
+  CATEGORY,
   recipes,
 };
