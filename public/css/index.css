@@ -2,6 +2,7 @@ body {
   font-family: "Nunito Sans";
   background-color: black;
   color: white;
+  margin: 0;
 }
 header {
   display: flex;
@@ -21,7 +22,7 @@ ul {
 .filterButton {
   width: 56px;
   height: 56px;
-  border: 3px solid rgb(182, 7, 65);
+  border: 1px solid rgb(182, 7, 65);
   background: rgb(182, 7, 65);
   color: white;
   border-radius: 5px 5px 5px 5px;
@@ -29,6 +30,9 @@ ul {
   font-size: 30px;
   transition: 0.3s;
   outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .filterButton:hover {
   background : white;
@@ -37,7 +41,7 @@ ul {
 }
 .search {
   font-size: 18px;
-  border: 3px solid rgb(182, 7, 65);
+  border: 1px solid rgb(182, 7, 65);
   border-right: none; 
   padding: 10px;
   border-radius: 5px 0px 0px 5px;
@@ -49,7 +53,7 @@ ul {
 .searchButton {
   width: 56px;
   height: 56px;
-  border: 3px solid rgb(182, 7, 65);
+  border: 1px solid rgb(182, 7, 65);
   background: rgb(182, 7, 65);
   color: white;
   border-radius: 0 5px 5px 0;
@@ -57,6 +61,9 @@ ul {
   font-size: 40px;
   transition: 0.3s;
   outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .searchButton:hover {
   background : white;
@@ -71,6 +78,7 @@ ul {
   position: fixed;
   bottom: calc(0px - 100vh);
   background-color: black;
+  opacity: 0.9;
   transition: bottom ease-in-out 500ms; 
   z-index: 1;
   display: flex;
@@ -91,7 +99,7 @@ ul {
 .sideNav button {
   font-size: 32px;
   background-color: rgb(48, 48, 48);
-  border-radius: 30px;
+  border-radius: 5px 5px 5px 5px;
   color: white;
   padding: 10px 20px;
   margin: 10px;
@@ -122,7 +130,7 @@ ul {
     font-size: 18px;
   }
   .search {
-    font-size: 16px;
+    font-size: 14px;
   }
   .menu {
     height: 32px;
@@ -133,6 +141,11 @@ ul {
     width: 32px;
     font-size: 18px;
   }
+  .sideNav {
+    display: block;
+  }
   .sideNav button {
-    font-size: 18px;
+    font-size: 16px;
+    padding: 8px 10px;
+    margin: 5px;
   }
