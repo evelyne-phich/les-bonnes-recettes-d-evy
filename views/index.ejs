@@ -6,9 +6,46 @@
 
   <body>
 
-    <%- include("./partials/header") -%> 
+    <%- include("./partials/header") -%>
+
     <%- include("./partials/sideNav") -%>
-    
+
+    <div class="allRecipes">
+    <% for (const recipe of starterRecipes) { %>
+      <div class=recipeThumbnail>
+        <img class="recipePhoto" src="<%- recipe.pictureUrl -%>"/>
+        <div class="recipeLegend">
+          <div class="recipeCategory"><%- recipe.category -%></div>
+          <div class="recipeName"><%- recipe.name -%></div>
+        </div>
+      </div>
+    <% } %>
+    </div>
+
+    <div class="allRecipes">
+    <% for (const recipe of dishRecipes) { %>
+      <div class=recipeThumbnail>
+        <img class="recipePhoto" src="<%- recipe.pictureUrl -%>"/>
+        <div class="recipeLegend">
+          <div class="recipeCategory"><%- recipe.category -%></div>
+          <div class="recipeName"><%- recipe.name -%></div>
+        </div>
+      </div>
+    <% } %>
+    </div>
+
+    <div class="allRecipes">
+    <% for (const recipe of dessertRecipes) { %>
+      <div class=recipeThumbnail>
+        <img class="recipePhoto" src="<%- recipe.pictureUrl -%>"/>
+        <div class="recipeLegend">
+          <div class="recipeCategory"><%- recipe.category -%></div>
+          <div class="recipeName"><%- recipe.name -%></div>
+        </div>
+      </div>
+    <% } %>
+    </div>
+
     <script src="/js/index.js"></script>
 
   </body>
