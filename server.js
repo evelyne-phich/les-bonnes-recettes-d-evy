@@ -30,8 +30,11 @@ app.get("/", async (request, response) => {
 
   return response.render("index", {
     starterRecipes: starterRecipes,
+    starterRecipesJSON: JSON.stringify(starterRecipes), // JavaScript Object Notation
     dishRecipes: dishRecipes,
+    dishRecipesJSON: JSON.stringify(dishRecipes), // JavaScript Object Notation
     dessertRecipes: dessertRecipes,
+    dessertRecipesJSON: JSON.stringify(dessertRecipes), // JavaScript Object Notation
   });
 });
 

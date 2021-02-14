@@ -10,7 +10,7 @@
 
     <%- include("./partials/sideNav") -%>
 
-    <div class="allRecipes">
+    <div id="starterRecipes" class="allRecipes">
     <% for (const recipe of starterRecipes) { %>
       <div class=recipeThumbnail>
         <img class="recipePhoto" src="<%- recipe.pictureUrl -%>"/>
@@ -22,7 +22,7 @@
     <% } %>
     </div>
 
-    <div class="allRecipes">
+    <div id="dishRecipes" class="allRecipes">
     <% for (const recipe of dishRecipes) { %>
       <div class=recipeThumbnail>
         <img class="recipePhoto" src="<%- recipe.pictureUrl -%>"/>
@@ -34,7 +34,7 @@
     <% } %>
     </div>
 
-    <div class="allRecipes">
+    <div id="dessertRecipes" class="allRecipes">
     <% for (const recipe of dessertRecipes) { %>
       <div class=recipeThumbnail>
         <img class="recipePhoto" src="<%- recipe.pictureUrl -%>"/>
@@ -45,6 +45,13 @@
       </div>
     <% } %>
     </div>
+
+    <script>
+      const starterRecipes = <%- starterRecipesJSON %>;    
+      const dishRecipes = <%- dishRecipesJSON %>;
+      const dessertRecipes = <%- dessertRecipesJSON %>;              
+
+    </script>
 
     <script src="/js/index.js"></script>
 
