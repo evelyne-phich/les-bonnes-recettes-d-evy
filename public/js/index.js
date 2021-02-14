@@ -1,5 +1,3 @@
-const { CATEGORY } = require("../../database/recipe");
-
 function openSideNav() {
   let sideNav = document.getElementById("sideNav");
   sideNav.classList.add("sideNavIsOpen");
@@ -24,6 +22,30 @@ function createRecipeThumbnail(recipe) {
       </div>
     </div>
   `;
+}
+
+function hideStarterRecipes() {
+  const starterRecipesBlock = document.getElementById("starterRecipes");
+
+  starterRecipesBlock.innerHTML = "";
+}
+
+function hideDishRecipes() {
+  const dishRecipesBlock = document.getElementById("dishRecipes");
+
+  dishRecipesBlock.innerHTML = "";
+}
+
+function hideDessertRecipes() {
+  const dessertRecipesBlock = document.getElementById("dessertRecipes");
+
+  dessertRecipesBlock.innerHTML = "";
+}
+
+function clearSearchBar() {
+  let input = document.getElementById("search");
+
+  input.value = "";
 }
 
 function filterThumbnailsBySearch() {
@@ -157,17 +179,11 @@ function showAllStarters() {
 
   starterRecipesBlock.innerHTML = newHTMLForStarterRecipes;
 
-  const dishRecipesBlock = document.getElementById("dishRecipes");
+  hideDishRecipes();
 
-  dishRecipesBlock.innerHTML = "";
+  hideDessertRecipes();
 
-  const dessertRecipesBlock = document.getElementById("dessertRecipes");
-
-  dessertRecipesBlock.innerHTML = "";
-
-  let input = document.getElementById("search");
-
-  input.value = "";
+  clearSearchBar();
 }
 
 function showAllDishes() {
@@ -185,17 +201,11 @@ function showAllDishes() {
 
   dishRecipesBlock.innerHTML = newHTMLForDishRecipes;
 
-  const starterRecipesBlock = document.getElementById("starterRecipes");
+  hideStarterRecipes();
 
-  starterRecipesBlock.innerHTML = "";
+  hideDessertRecipes();
 
-  const dessertRecipesBlock = document.getElementById("dessertRecipes");
-
-  dessertRecipesBlock.innerHTML = "";
-
-  let input = document.getElementById("search");
-
-  input.value = "";
+  clearSearchBar();
 }
 
 function showAllDesserts() {
@@ -213,15 +223,36 @@ function showAllDesserts() {
 
   dessertRecipesBlock.innerHTML = newHTMLForDessertRecipes;
 
+  hideStarterRecipes();
+
+  hideDishRecipes();
+
+  clearSearchBar();
+}
+
+//Filter by country
+function showStartersByCountry(country) {
+  closeSideNav();
+
+  const filteredStarterRecipes = starterRecipes.filter(
+    (recipe) => recipe.country === country
+  );
+
   const starterRecipesBlock = document.getElementById("starterRecipes");
 
-  starterRecipesBlock.innerHTML = "";
+  let newHTMLForStarterRecipes = "";
 
-  const dishRecipesBlock = document.getElementById("dishRecipes");
+  for (let i = 0; i < filteredStarterRecipes.length; i++) {
+    const newRecipeThumbnail = createRecipeThumbnail(filteredStarterRecipes[i]);
 
-  dishRecipesBlock.innerHTML = "";
+    newHTMLForStarterRecipes = newHTMLForStarterRecipes + newRecipeThumbnail;
+  }
 
-  let input = document.getElementById("search");
+  starterRecipesBlock.innerHTML = newHTMLForStarterRecipes;
 
-  input.value = "";
+  hideDishRecipes();
+
+  hideDessertRecipes();
+
+  clearSearchBar();
 }
