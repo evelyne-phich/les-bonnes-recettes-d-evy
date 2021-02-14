@@ -256,3 +256,55 @@ function showStartersByCountry(country) {
 
   clearSearchBar();
 }
+
+function showDishesByCountry(country) {
+  closeSideNav();
+
+  const filteredDishRecipes = dishRecipes.filter(
+    (recipe) => recipe.country === country
+  );
+
+  const dishRecipesBlock = document.getElementById("dishRecipes");
+
+  let newHTMLForDishRecipes = "";
+
+  for (let i = 0; i < filteredDishRecipes.length; i++) {
+    const newRecipeThumbnail = createRecipeThumbnail(filteredDishRecipes[i]);
+
+    newHTMLForDishRecipes = newHTMLForDishRecipes + newRecipeThumbnail;
+  }
+
+  dishRecipesBlock.innerHTML = newHTMLForDishRecipes;
+
+  hideStarterRecipes();
+
+  hideDessertRecipes();
+
+  clearSearchBar();
+}
+
+function showDessertsByCountry(country) {
+  closeSideNav();
+
+  const filteredDessertRecipes = dessertRecipes.filter(
+    (recipe) => recipe.country === country
+  );
+
+  const dessertRecipesBlock = document.getElementById("dessertRecipes");
+
+  let newHTMLForDessertRecipes = "";
+
+  for (let i = 0; i < filteredDessertRecipes.length; i++) {
+    const newRecipeThumbnail = createRecipeThumbnail(filteredDessertRecipes[i]);
+
+    newHTMLForDessertRecipes = newHTMLForDessertRecipes + newRecipeThumbnail;
+  }
+
+  dessertRecipesBlock.innerHTML = newHTMLForDessertRecipes;
+
+  hideStarterRecipes();
+
+  hideDishRecipes();
+
+  clearSearchBar();
+}
