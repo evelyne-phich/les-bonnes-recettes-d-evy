@@ -1,6 +1,6 @@
 const CATEGORY = {
-  DISH: "Plat",
   STARTER: "Entrée",
+  DISH: "Plat",
   DESSERT: "Dessert",
 };
 

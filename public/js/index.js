@@ -18,17 +18,28 @@ function filterThumbnailsBySearch() {
   let input = document.getElementById("search");
 
   // Filter Starter Recipes
-  const filteredStarterRecipes = starterRecipes.filter((recipe) =>
-    recipe.name
-      .toUpperCase()
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .includes(
-        input.value
-          .toUpperCase()
-          .normalize("NFD")
-          .replace(/[\u0300-\u036f]/g, "")
-      )
+  const filteredStarterRecipes = starterRecipes.filter(
+    (recipe) =>
+      recipe.name
+        .toUpperCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .includes(
+          input.value
+            .toUpperCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+        ) ||
+      recipe.category
+        .toUpperCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .includes(
+          input.value
+            .toUpperCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+        )
   );
 
   const starterRecipesBlock = document.getElementById("starterRecipes");
@@ -52,17 +63,28 @@ function filterThumbnailsBySearch() {
   starterRecipesBlock.innerHTML = newHTMLForStarterRecipes;
 
   // Filter Dish Recipes
-  const filteredDishRecipes = dishRecipes.filter((recipe) =>
-    recipe.name
-      .toUpperCase()
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .includes(
-        input.value
-          .toUpperCase()
-          .normalize("NFD")
-          .replace(/[\u0300-\u036f]/g, "")
-      )
+  const filteredDishRecipes = dishRecipes.filter(
+    (recipe) =>
+      recipe.name
+        .toUpperCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .includes(
+          input.value
+            .toUpperCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+        ) ||
+      recipe.category
+        .toUpperCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .includes(
+          input.value
+            .toUpperCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+        )
   );
 
   const dishRecipesBlock = document.getElementById("dishRecipes");
@@ -86,17 +108,28 @@ function filterThumbnailsBySearch() {
   dishRecipesBlock.innerHTML = newHTMLForDishRecipes;
 
   // Filter Dessert Recipes
-  const filteredDessertRecipes = dessertRecipes.filter((recipe) =>
-    recipe.name
-      .toUpperCase()
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .includes(
-        input.value
-          .toUpperCase()
-          .normalize("NFD")
-          .replace(/[\u0300-\u036f]/g, "")
-      )
+  const filteredDessertRecipes = dessertRecipes.filter(
+    (recipe) =>
+      recipe.name
+        .toUpperCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .includes(
+          input.value
+            .toUpperCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+        ) ||
+      recipe.category
+        .toUpperCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .includes(
+          input.value
+            .toUpperCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+        )
   );
 
   const dessertRecipesBlock = document.getElementById("dessertRecipes");
