@@ -103,7 +103,6 @@ ul {
 .sideNav .category {
   color: rgb(182, 7, 65);
   background-color: rgb(214, 214, 214);
-  transition: all 250ms ease;
 }
 .sideNav .category:hover {
   color: rgb(182, 7, 65);
