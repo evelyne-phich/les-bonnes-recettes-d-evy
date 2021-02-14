@@ -28,6 +28,28 @@ ul {
 .searchBar {
   display: flex;
 }
+.homeLink {
+  width: 54px;
+  height: 54px;
+  border: 1px solid rgb(182, 7, 65);
+  background: rgb(182, 7, 65);
+  color: white;
+  border-radius: 5px 5px 5px 5px;
+  cursor: pointer;
+  font-size: 30px;
+  transition: 0.3s;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-shadow: none;
+}
+.homeLink:hover {
+  background: white;
+  opacity: 0.9;
+  color: rgb(182, 7, 65);
+}
 .filterButton {
   width: 56px;
   height: 56px;
@@ -42,6 +64,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 16px;
 }
 .filterButton:hover {
   background: white;
@@ -78,12 +101,6 @@ ul {
 }
 .menu {
   display: flex;
-}
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  box-shadow: 0px 0px 20px black;
 }
 .sideNav {
   height: calc(100vh - 100px);
@@ -195,6 +212,11 @@ ul {
     font-size: 24px;
     justify-content: unset;
     height: 80px;
+  }
+  .homeLink {
+    height: 30px;
+    width: 30px;
+    font-size: 18px;
   }
   .filterButton {
     height: 32px;
