@@ -148,13 +148,13 @@ ul {
   width: 100%;
   z-index: 1;
   position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.6);
+  bottom: calc(0px - 100vh);
+  transition: bottom ease-in-out 500ms;
 }
 .outsideOfSideNavIsOpen {
-  display: block;
+  bottom: 0px;
 }
 .allRecipes {
   display: flex;
