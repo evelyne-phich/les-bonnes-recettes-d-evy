@@ -26,7 +26,7 @@ const recipes = [
       "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_416/v1613243723/PXL_20201124_183850908.PORTRAIT_uk155u.jpg",
     country: COUNTRY.CHINESE,
     preparationTime: "15 min",
-    cookingTime: "0 min",
+    cookingTime: "00 min",
     totalTime: "15 min",
     quantity: "Pour 6 oeufs",
     ingredients: [
