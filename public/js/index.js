@@ -15,10 +15,10 @@ function closeSideNav() {
 function createRecipeThumbnail(recipe) {
   return `
     <div class="recipeThumbnail">
-      <img class="recipePhoto" src="${recipe.pictureUrl}"/>
-      <div class="recipeLegend">
-        <div class="recipeCategory">${recipe.category}</div>
-        <div class="recipeName">${recipe.name}</div>
+      <img class="recipeThumbnailPhoto" src="${recipe.thumbnailPictureUrl}"/>
+      <div class="recipeThumbnailLegend">
+        <div class="recipeThumbnailCategory">${recipe.category}</div>
+        <div class="recipeThumbnailName">${recipe.name}</div>
       </div>
     </div>
   `;

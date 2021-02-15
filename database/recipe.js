@@ -26,7 +26,7 @@ const recipes = [
       "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_416/v1613243723/PXL_20201124_183850908.PORTRAIT_uk155u.jpg",
     country: COUNTRY.CHINESE,
     preparationTime: "15 min",
-    cookingTime: "00 min",
+    cookingTime: "0 min",
     totalTime: "15 min",
     quantity: "Pour 6 oeufs",
     ingredients: [
@@ -35,7 +35,17 @@ const recipes = [
       "Vinaigre noir",
       "Coriandre",
     ],
-    instructions: [],
+    instructions: [
+      "Ecaler les oeufs.",
+      "Les couper en 4 dans le sens de la longueur.",
+      "Les disposer dans un plat.",
+      "Ajouter un peu de sucre.",
+      "Réserver au frais pendant 30 min.",
+      "Laver la coriandre.",
+      "Ajouter des échalotes au vinaigre dans le plat.",
+      "Verser du vinaigre noir.",
+      "Disposer de la coriandre par-dessus.",
+    ],
   },
   {
     id: 2,

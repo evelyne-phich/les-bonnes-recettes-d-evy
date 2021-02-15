@@ -28,15 +28,72 @@
   text-align: right;
   font-size: 36px;
 }
+.preparationTime {
+  display: flex;
+  justify-content: space-between;
+}
 .preparationTime i {
-  padding: 10px;
+  margin-right: 10px;
+}
+.cookingTime {
+  display: flex;
+  justify-content: space-between;
 }
 .cookingTime i {
-  padding: 10px;
+  margin-right: 10px;
+}
+.totalTime {
+  display: flex;
+  justify-content: space-between;
 }
 .totalTime i {
-  padding: 10px;
+  margin-right: 10px;
 }
 .quantity {
   font-size: 36px;
+}
+.recipe {
+  display: flex;
+  justify-content: space-evenly;
+  line-height: 32px;
+  margin-top: 64px;
+}
+.ingredients {
+  font-size: 32px;
+  font-weight: 600;
+  color: rgb(182, 7, 65);
+  background-color: rgb(34, 34, 34);
+  padding: 40px;
+  border-radius: 5px;
+}
+.ingredients li {
+  font-size: 18px;
+  font-weight: normal;
+  color: white;
+}
+.instructions {
+  font-size: 32px;
+  font-weight: 600;
+  color: rgb(182, 7, 65);
+  list-style-position: inside;
+  padding: 40px;
+}
+.instructions li {
+  font-size: 18px;
+  font-weight: normal;
+  color: white;
+}
+ol {
+  list-style: none;
+  counter-reset: counter;
+}
+ol li {
+  counter-increment: counter;
+}
+ol li::before {
+  content: counter(counter) " ";
+  color: rgb(182, 7, 65);
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 5px;
 }

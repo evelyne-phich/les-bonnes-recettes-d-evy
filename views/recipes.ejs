@@ -26,8 +26,16 @@
     </div>
 
     <div class="recipe">
-        <ul class="ingredients"></ul>
-        <ul class="instructions"></ul>
+        <ul class="ingredients">Ingrédients<hr>
+          <% for (let i=0; i<(recipe.ingredients).length; i++) { %>
+          <li><%- recipe.ingredients[i] -%></li>
+          <% } %>
+        </ul>
+        <ol class="instructions">Instructions<hr>
+          <% for (let i=0; i<(recipe.instructions).length; i++) { %>
+            <li><%- recipe.instructions[i] -%></li>
+            <% } %>
+        </ol>
     </div>
 
     <script src="/js/index.js"></script>
