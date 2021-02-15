@@ -51,7 +51,7 @@ app.get("/recipe/:recipeId", async (request, response) => {
     return response.render("notFound", {});
   }
 
-  return response.render("recipe", {
+  return response.render("recipes", {
     recipe: recipe,
   });
 });

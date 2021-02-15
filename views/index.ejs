@@ -6,17 +6,17 @@
 
   <body>
 
-    <%- include("./partials/header") -%>
+    <%- include("./partials/header-index") -%>
 
     <%- include("./partials/sideNav") -%>
 
     <div id="starterRecipes" class="allRecipes">
     <% for (const recipe of starterRecipes) { %>
       <div class=recipeThumbnail>
-        <img class="recipePhoto" src="<%- recipe.pictureUrl -%>"/>
-        <div class="recipeLegend">
-          <div class="recipeCategory"><%- recipe.category -%></div>
-          <div class="recipeName"><%- recipe.name -%></div>
+        <img class="recipeThumbnailPhoto" src="<%- recipe.thumbnailPictureUrl -%>"/>
+        <div class="recipeThumbnailLegend">
+          <div class="recipeThumbnailCategory"><%- recipe.category -%></div>
+          <div class="recipeThumbnailName"><%- recipe.name -%></div>
         </div>
       </div>
     <% } %>
@@ -25,10 +25,10 @@
     <div id="dishRecipes" class="allRecipes">
     <% for (const recipe of dishRecipes) { %>
       <div class=recipeThumbnail>
-        <img class="recipePhoto" src="<%- recipe.pictureUrl -%>"/>
-        <div class="recipeLegend">
-          <div class="recipeCategory"><%- recipe.category -%></div>
-          <div class="recipeName"><%- recipe.name -%></div>
+        <img class="recipeThumbnailPhoto" src="<%- recipe.thumbnailPictureUrl -%>"/>
+        <div class="recipeThumbnailLegend">
+          <div class="recipeThumbnailCategory"><%- recipe.category -%></div>
+          <div class="recipeThumbnailName"><%- recipe.name -%></div>
         </div>
       </div>
     <% } %>
@@ -37,10 +37,10 @@
     <div id="dessertRecipes" class="allRecipes">
     <% for (const recipe of dessertRecipes) { %>
       <div class=recipeThumbnail>
-        <img class="recipePhoto" src="<%- recipe.pictureUrl -%>"/>
-        <div class="recipeLegend">
-          <div class="recipeCategory"><%- recipe.category -%></div>
-          <div class="recipeName"><%- recipe.name -%></div>
+        <img class="recipeThumbnailPhoto" src="<%- recipe.thumbnailPictureUrl -%>"/>
+        <div class="recipeThumbnailLegend">
+          <div class="recipeThumbnailCategory"><%- recipe.category -%></div>
+          <div class="recipeThumbnailName"><%- recipe.name -%></div>
         </div>
       </div>
     <% } %>
