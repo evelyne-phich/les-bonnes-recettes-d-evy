@@ -38,6 +38,24 @@ app.get("/", async (request, response) => {
   });
 });
 
+app.get("/recipe/:recipeId", async (request, response) => {
+  const recipeId = request.params.recipeId;
+
+  if (!recipeId) {
+    return response.render("notFound", {});
+  }
+
+  const recipe = await recipeResource.getRecipeById(recipeId);
+
+  if (!recipe) {
+    return response.render("notFound", {});
+  }
+
+  return response.render("recipe", {
+    recipe: recipe,
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`The server is listening on: http://localhost:${PORT}`);
 });

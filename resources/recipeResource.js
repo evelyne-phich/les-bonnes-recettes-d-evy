@@ -8,6 +8,18 @@ const getRecipes = async () => {
   return recipes;
 };
 
+const getRecipeById = async (recipeId) => {
+  /**
+   * @param recipeId number
+   *
+   * @return recipe | undefined
+   */
+  let recipe = await recipeDao.findById(recipeId);
+
+  return recipe;
+};
+
 module.exports = {
   getRecipes,
+  getRecipeById,
 };

@@ -17,6 +17,7 @@ const COUNTRY = {
 
 const recipes = [
   {
+    id: 1,
     category: CATEGORY.STARTER,
     name: "Oeufs de cent ans",
     pictureUrl:
@@ -24,6 +25,7 @@ const recipes = [
     country: COUNTRY.CHINESE,
   },
   {
+    id: 2,
     category: CATEGORY.DISH,
     name: "Loc Lac",
     pictureUrl:
@@ -31,6 +33,7 @@ const recipes = [
     country: COUNTRY.INDOCHINESE,
   },
   {
+    id: 3,
     category: CATEGORY.DISH,
     name: "Zha Jiang Mian",
     pictureUrl:
@@ -38,6 +41,7 @@ const recipes = [
     country: COUNTRY.CHINESE,
   },
   {
+    id: 4,
     category: CATEGORY.DISH,
     name: "Phô",
     pictureUrl:
@@ -45,6 +49,7 @@ const recipes = [
     country: COUNTRY.VIETNAMESE,
   },
   {
+    id: 5,
     category: CATEGORY.DISH,
     name: "Couscous",
     pictureUrl:
@@ -52,6 +57,7 @@ const recipes = [
     country: COUNTRY.MAGHREBIAN,
   },
   {
+    id: 6,
     category: CATEGORY.DISH,
     name: "Risotto aux fruits de mer",
     pictureUrl:
@@ -59,6 +65,7 @@ const recipes = [
     country: COUNTRY.ITALIAN,
   },
   {
+    id: 7,
     category: CATEGORY.DISH,
     name: "Risotto au parmesan et aux champignons",
     pictureUrl:
@@ -66,6 +73,7 @@ const recipes = [
     country: COUNTRY.ITALIAN,
   },
   {
+    id: 8,
     category: CATEGORY.DISH,
     name: "Paella",
     pictureUrl:
@@ -73,6 +81,7 @@ const recipes = [
     country: COUNTRY.SPANISH,
   },
   {
+    id: 9,
     category: CATEGORY.DESSERT,
     name: "Cookies aux pépites de chocolat",
     pictureUrl:
@@ -80,6 +89,7 @@ const recipes = [
     country: COUNTRY.AMERICAN,
   },
   {
+    id: 10,
     category: CATEGORY.DESSERT,
     name: "Fondant au chocolat",
     pictureUrl:
@@ -87,6 +97,7 @@ const recipes = [
     country: COUNTRY.FRENCH,
   },
   {
+    id: 11,
     category: CATEGORY.DESSERT,
     name: "Cake à la banane et aux pépites de chocolat",
     pictureUrl:
@@ -94,6 +105,7 @@ const recipes = [
     country: COUNTRY.FRENCH,
   },
   {
+    id: 12,
     category: CATEGORY.DESSERT,
     name: "Cake au matcha et aux framboises",
     pictureUrl:
@@ -101,6 +113,7 @@ const recipes = [
     country: COUNTRY.FRENCH,
   },
   {
+    id: 13,
     category: CATEGORY.DESSERT,
     name: "Cake marbré au chocolat",
     pictureUrl:
@@ -108,6 +121,7 @@ const recipes = [
     country: COUNTRY.FRENCH,
   },
   {
+    id: 14,
     category: CATEGORY.DESSERT,
     name: "Cake aux myrtilles",
     pictureUrl:
@@ -115,6 +129,7 @@ const recipes = [
     country: COUNTRY.FRENCH,
   },
   {
+    id: 15,
     category: CATEGORY.DESSERT,
     name: "Crêpes",
     pictureUrl:
