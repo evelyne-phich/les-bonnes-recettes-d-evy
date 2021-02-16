@@ -23,7 +23,9 @@ const recipes = [
     thumbnailPictureUrl:
       "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_256/v1613243723/PXL_20201124_183850908.PORTRAIT_uk155u.jpg",
     pictureUrl:
-      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_368/v1613243723/PXL_20201124_183850908.PORTRAIT_uk155u.jpg",
+      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_358/v1613508634/PXL_20201124_183850908.PORTRAIT_qaxreq.jpg",
+    mobilePictureUrl:
+      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_256/v1613508634/PXL_20201124_183850908.PORTRAIT_qaxreq.jpg",
     country: COUNTRY.CHINESE,
     preparationTime: "15 min",
     restTime: "30 min",
@@ -55,6 +57,8 @@ const recipes = [
       "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_256/v1613491099/PXL_20201121_182427531.PORTRAIT_1_g8defd.jpg",
     pictureUrl:
       "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_584/v1613491099/PXL_20201121_182427531.PORTRAIT_1_g8defd.jpg",
+    mobilePictureUrl:
+      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_256/v1613491099/PXL_20201121_182427531.PORTRAIT_1_g8defd.jpg",
     country: COUNTRY.INDOCHINESE,
     preparationTime: "15 min",
     cookingTime: "30 min",
@@ -64,8 +68,8 @@ const recipes = [
     ingredients: [
       "500 g de merlan de boeuf",
       "3 gousses d'ail",
-      "3 cs de sauce soja",
-      "6 cs de sauce huître",
+      "3 cs de sauce soja salée",
+      "5 cs de sauce huître",
       "3 verres de riz thaï",
       "2 cs de concentré de tomates",
       "4 cs de ketchup",
@@ -79,7 +83,7 @@ const recipes = [
       "Huile de tournesol",
     ],
     instructions: [
-      "Couper le boeuf en cubes, hacher les gousses d'ail, puis les mettre dans un bol.",
+      "Couper le boeuf en cubes, émincer les gousses d'ail, puis les mettre dans un bol.",
       "Ajouter la sauce soja et la sauce huître.",
       "Mélanger et laisser mariner au frais pendant au moins 1 heure.",
       "Rincer le riz et le cuire dans un cuiseur à riz.",
@@ -100,7 +104,57 @@ const recipes = [
     name: "Zha Jiang Mian",
     thumbnailPictureUrl:
       "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_256/v1613243456/149990910_1909050255915243_2559880426026161432_n_vzjh1u.jpg",
+    pictureUrl:
+      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_368/v1613509187/149990910_1909050255915243_2559880426026161432_n_mxm0mu.jpg",
+    mobilePictureUrl:
+      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_256/v1613509187/149990910_1909050255915243_2559880426026161432_n_mxm0mu.jpg",
     country: COUNTRY.CHINESE,
+    preparationTime: "30 min",
+    cookingTime: "45 min",
+    restTime: "0 min",
+    totalTime: "1 H 15 min",
+    quantity: "Pour 4 personnes",
+    ingredients: [
+      "400 g de palette de porc",
+      "5 gousses d'ail",
+      "2 échalotes",
+      "1 oignon",
+      '1 cs de sauce "chili bean" (Toban Djan)',
+      "4 cs de sauce au soja salée",
+      "1 cs de poivre",
+      "2 cs de sucre roux",
+      '1 cs de "Chen Nian Hua Tiao Wine"',
+      "1 cc de Maïzena",
+      "5 cs de sauce huître",
+      "2 cs de sauce saveur abalone",
+      "1 paquet de tofu aux 5 épices",
+      "Huile de tournesol",
+      "2 cs de sauce soja salée",
+      '2 cs de sauce "mushroom dark soy sauce"',
+      "1 kg d'udon",
+      "1 concombre",
+      "Pousses de soja",
+      "Coriandre",
+      "Ciboulette",
+    ],
+    instructions: [
+      "Emincer les gousses d'ail, les échalotes et l'oignon, puis réserver.",
+      "Rincer la palette de porc et la couper en morceaux.",
+      "Mixer le porc avec la sauce au soja salée.",
+      'Assaisonner le porc haché avec du poivre, du sucre, du vin "Chen Nian Hua Tiao", de la sauce huître, de la sauce saveur abalone et de la maïzena, puis réserver.',
+      "Rincer le tofu aux 5 épices et le couper en dés, puis réserver.",
+      "Dans un wok chauffé à feu vif, verser un peu d'huile de tournesol.",
+      "Ajouter l'oignon, puis l'ail et les échalotes, pour les faire dorer.",
+      'Ajouter la sauce "chili bean" (Toban Djan).',
+      "Ajouter le porc haché.",
+      "Ajouter le tofu aux 5 épices.",
+      'Ajouter la sauce soja salée et la sauce "mushroom dark soy sauce".',
+      "Ajouter 75 cl d'eau bouillante et laisser mijoter pendant 2 minutes.",
+      "Ajouter 30 cl d'eau bouillante et laisser mijoter pendant 2 minutes.",
+      "Couvrir et laisser mijoter pendant 30 minutes à feu doux.",
+      "Laver et couper le concombre, les pousses de soja, la coriandre et la ciboulette.",
+      "Juste avant le service, cuire les udon.",
+    ],
   },
   {
     id: 4,
@@ -108,6 +162,10 @@ const recipes = [
     name: "Phô",
     thumbnailPictureUrl:
       "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_256/v1613239803/PXL_20201123_114903231_imx8m2.jpg",
+    pictureUrl:
+      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_368/v1613509671/PXL_20201123_114903231_ljbsyr.jpg",
+    mobilePictureUrl:
+      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_256/v1613509671/PXL_20201123_114903231_ljbsyr.jpg",
     country: COUNTRY.VIETNAMESE,
   },
   {

@@ -79,6 +79,7 @@
   justify-content: space-evenly;
   line-height: 32px;
   margin-top: 160px;
+  padding: 0 40px;
 }
 .ingredients {
   font-size: 32px;
@@ -146,6 +147,7 @@ ol li::before {
   .recipe {
     flex-direction: column;
     margin-top: 0;
+    padding: 0;
   }
   .ingredients {
     font-size: 18px;
