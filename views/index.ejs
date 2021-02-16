@@ -12,41 +12,43 @@
 
     <div id="starterRecipes" class="allRecipes">
     <% for (const recipe of starterRecipes) { %>
-      <div class=recipeThumbnail>
-        <a href="/recipe/<%- recipe.id -%>">
-        <img class="recipeThumbnailPhoto" src="<%- recipe.thumbnailPictureUrl -%>"/>
-        <div class="recipeThumbnailLegend">
-          <div class="recipeThumbnailCategory"><%- recipe.category -%></div>
-          <div class="recipeThumbnailName"><%- recipe.name -%></div>
+      <a href="/recipe/<%- recipe.id -%>">
+        <div class=recipeThumbnail>
+          <img class="recipeThumbnailPhoto" src="<%- recipe.thumbnailPictureUrl -%>"/>
+          <div class="recipeThumbnailLegend">
+            <div class="recipeThumbnailCategory"><%- recipe.category -%></div>
+            <div class="recipeThumbnailName"><%- recipe.name -%></div>
+          </div>
         </div>
-        </a>
-      </div>
+      </a>
     <% } %>
     </div>
 
     <div id="dishRecipes" class="allRecipes">
     <% for (const recipe of dishRecipes) { %>
-      <div class=recipeThumbnail>
-        <a href="/recipe/<%- recipe.id -%>">
-        <img class="recipeThumbnailPhoto" src="<%- recipe.thumbnailPictureUrl -%>"/>
-        <div class="recipeThumbnailLegend">
-          <div class="recipeThumbnailCategory"><%- recipe.category -%></div>
-          <div class="recipeThumbnailName"><%- recipe.name -%></div>
+      <a href="/recipe/<%- recipe.id -%>">
+        <div class=recipeThumbnail>
+          <img class="recipeThumbnailPhoto" src="<%- recipe.thumbnailPictureUrl -%>"/>
+          <div class="recipeThumbnailLegend">
+            <div class="recipeThumbnailCategory"><%- recipe.category -%></div>
+            <div class="recipeThumbnailName"><%- recipe.name -%></div>
+          </div>
         </div>
-      </div>
+      </a>
     <% } %>
     </div>
 
     <div id="dessertRecipes" class="allRecipes">
     <% for (const recipe of dessertRecipes) { %>
-      <div class=recipeThumbnail>
-        <a href="/recipe/<%- recipe.id -%>">
-        <img class="recipeThumbnailPhoto" src="<%- recipe.thumbnailPictureUrl -%>"/>
-        <div class="recipeThumbnailLegend">
-          <div class="recipeThumbnailCategory"><%- recipe.category -%></div>
-          <div class="recipeThumbnailName"><%- recipe.name -%></div>
+      <a href="/recipe/<%- recipe.id -%>">
+        <div class=recipeThumbnail>
+          <img class="recipeThumbnailPhoto" src="<%- recipe.thumbnailPictureUrl -%>"/>
+          <div class="recipeThumbnailLegend">
+            <div class="recipeThumbnailCategory"><%- recipe.category -%></div>
+            <div class="recipeThumbnailName"><%- recipe.name -%></div>
+          </div>
         </div>
-      </div>
+      </a>
     <% } %>
     </div>
 

@@ -54,7 +54,7 @@ const recipes = [
     thumbnailPictureUrl:
       "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_256/v1613491099/PXL_20201121_182427531.PORTRAIT_1_g8defd.jpg",
     pictureUrl:
-      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_368/v1613506792/IMG_20200716_191650_t4jyfz.jpg",
+      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_584/v1613491099/PXL_20201121_182427531.PORTRAIT_1_g8defd.jpg",
     country: COUNTRY.INDOCHINESE,
     preparationTime: "15 min",
     cookingTime: "30 min",
