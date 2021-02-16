@@ -11,20 +11,21 @@
     <%- include("./partials/sideNav") -%>
 
     <div class="introduction">
-        <img class="recipePhoto" src="<%- recipe.pictureUrl -%>"/>
         <div class="recipeTitle">
             <div class="recipeCategory"><%- recipe.category -%></div>
             <div class="recipeName"><%- recipe.name -%></div>
             <div class="time">
               <div class="preparationTime"><i class="fas fa-mitten"></i><%- recipe.preparationTime -%></div>
+              <div class="restTime"><i class="far fa-pause-circle"></i><%- recipe.restTime -%></div>
               <div class="cookingTime"><i class="fab fa-hotjar"></i><%- recipe.cookingTime -%></div>
               <hr>
               <div class="totalTime"><i class="far fa-clock"></i><%- recipe.totalTime -%></div>
             </div>
             <div class="quantity"><%- recipe.quantity -%></div>
         </div>
+        <img class="recipePhoto" src="<%- recipe.pictureUrl -%>"/>
+        <img class="recipePhotoMobile" src="<%- recipe.thumbnailPictureUrl -%>"/>
     </div>
-
     <div class="recipe">
         <ul class="ingredients">Ingrédients<hr>
           <% for (let i=0; i<(recipe.ingredients).length; i++) { %>

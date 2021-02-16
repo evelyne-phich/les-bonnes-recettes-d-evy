@@ -80,7 +80,6 @@ ul {
 .allRecipes {
   display: flex;
   flex-wrap: wrap;
-  display: flex;
   justify-content: space-evenly;
 }
 .recipeThumbnail {
