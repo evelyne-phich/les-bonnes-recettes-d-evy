@@ -154,6 +154,9 @@ ul {
     width: 128px;
     height: 160px;
   }
+  .recipeThumbnail:hover {
+    transform: none;
+  }
   .recipeThumbnailLegend {
     width: calc(100% - 6px);
     padding: 3px;

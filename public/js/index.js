@@ -14,6 +14,7 @@ function closeSideNav() {
 
 function createRecipeThumbnail(recipe) {
   return `
+  <a href="/recipe/${recipe.id}">
     <div class="recipeThumbnail">
       <img class="recipeThumbnailPhoto" src="${recipe.thumbnailPictureUrl}"/>
       <div class="recipeThumbnailLegend">
@@ -21,6 +22,7 @@ function createRecipeThumbnail(recipe) {
         <div class="recipeThumbnailName">${recipe.name}</div>
       </div>
     </div>
+    </a>
   `;
 }
 
