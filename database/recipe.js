@@ -154,6 +154,7 @@ const recipes = [
       "Couvrir et laisser mijoter pendant 30 minutes à feu doux.",
       "Laver et couper le concombre, les pousses de soja, la coriandre et la ciboulette.",
       "Juste avant le service, cuire les udon.",
+      "Disposer les udon dans les bols, verser la sauce au porc et au tofu par-dessus, puis parsemer de concombre, pousses de soja, coriandre et ciboulette.",
     ],
   },
   {
