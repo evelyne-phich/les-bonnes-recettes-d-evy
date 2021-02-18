@@ -30,7 +30,7 @@ header {
   border: 1px solid rgb(182, 7, 65);
   background: rgb(182, 7, 65);
   color: white;
-  border-radius: 5px 5px 5px 5px;
+  border-radius: 10px 10px 10px 10px;
   cursor: pointer;
   font-size: 30px;
   transition: 0.3s;
@@ -51,7 +51,7 @@ header {
   border: 1px solid rgb(182, 7, 65);
   border-right: none;
   padding: 10px;
-  border-radius: 5px 0px 0px 5px;
+  border-radius: 10px 0px 0px 10px;
   background-color: rgb(212, 212, 212);
   outline: none;
   margin-left: 16px;
@@ -61,7 +61,7 @@ header {
   height: 56px;
   border: 1px solid rgb(182, 7, 65);
   background: rgb(182, 7, 65);
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 10px 10px 0;
   cursor: pointer;
   font-size: 40px;
   transition: 0.3s;

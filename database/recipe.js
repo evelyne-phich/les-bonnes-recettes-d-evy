@@ -290,8 +290,17 @@ const recipes = [
     category: CATEGORY.DISH,
     name: "Risotto au parmesan et aux champignons",
     thumbnailPictureUrl:
-      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_256/v1613250039/PXL_20201116_184513904_zjtt8k.jpg",
+      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613250039/PXL_20201116_184513904_zjtt8k.jpg",
+    pictureUrl:
+      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613250039/PXL_20201116_184513904_zjtt8k.jpg",
     country: COUNTRY.ITALIAN,
+    preparationTime: "15 min",
+    cookingTime: "30 min",
+    restTime: "0 min",
+    totalTime: "45 min",
+    quantity: "Pour 4 personnes",
+    ingredients: [""],
+    instructions: [""],
   },
   {
     id: 8,

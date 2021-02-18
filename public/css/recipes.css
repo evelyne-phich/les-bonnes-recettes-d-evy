@@ -4,7 +4,7 @@
   margin-top: 40px;
 }
 .recipePhoto {
-  border-radius: 5px;
+  border-radius: 10px;
   transition: all 0.5s ease;
   object-fit: cover;
 }
@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  max-width: 600px;
 }
 .recipeCategory {
   font-size: 36px;
@@ -89,7 +89,7 @@
   color: rgb(182, 7, 65);
   background-color: rgb(34, 34, 34);
   padding: 40px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .ingredients li {
   font-size: 18px;
@@ -126,10 +126,13 @@ ol li::before {
 @media (max-width: 480px) {
   .introduction {
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 10px;
   }
   .recipePhoto {
     margin: 20px;
+  }
+  .recipePhoto:hover {
+    transform: none;
   }
   .recipeCategory {
     font-size: 16px;

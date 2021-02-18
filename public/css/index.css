@@ -8,7 +8,7 @@ ul {
   border: 1px solid rgb(182, 7, 65);
   background: rgb(182, 7, 65);
   color: white;
-  border-radius: 5px 5px 5px 5px;
+  border-radius: 10px 10px 10px 10px;
   cursor: pointer;
   font-size: 30px;
   transition: 0.3s;
@@ -48,7 +48,7 @@ ul {
 .sideNav button {
   font-size: 32px;
   background-color: rgb(48, 48, 48);
-  border-radius: 5px 5px 5px 5px;
+  border-radius: 10px 10px 10px 10px;
   color: white;
   padding: 2px 5px;
   margin: 5px;
@@ -101,7 +101,7 @@ ul {
   color: rgb(182, 7, 65);
 }
 .recipeThumbnailPhoto {
-  border-radius: 5px;
+  border-radius: 10px;
   position: absolute;
   height: 100%;
   width: 100%;
