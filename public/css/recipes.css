@@ -1,7 +1,7 @@
 .introduction {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 20px;
+  margin-top: 60px;
 }
 .recipePhoto {
   border-radius: 5px;
@@ -99,6 +99,7 @@
   font-weight: 600;
   color: rgb(182, 7, 65);
   padding: 40px;
+  padding-right: 0;
 }
 .instructions li {
   font-size: 18px;
