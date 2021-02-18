@@ -1,7 +1,7 @@
 .introduction {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 .recipePhoto {
   border-radius: 5px;
@@ -10,9 +10,6 @@
 }
 .recipePhoto:hover {
   transform: rotate(-5deg);
-}
-.recipePhotoMobile {
-  display: none;
 }
 .recipeTitle {
   display: flex;
@@ -25,9 +22,14 @@
   font-weight: 600;
   color: rgb(182, 7, 65);
 }
+.recipeCountry {
+  font-size: 40px;
+  color: rgb(182, 7, 65);
+}
 .recipeName {
   font-size: 56px;
   font-weight: 900;
+  text-align: center;
 }
 .time {
   text-align: right;
@@ -124,17 +126,16 @@ ol li::before {
 @media (max-width: 480px) {
   .introduction {
     flex-direction: column;
+    margin-top: 20px;
   }
   .recipePhoto {
-    display: none;
-  }
-  .recipePhotoMobile {
-    border-radius: 5px;
-    display: block;
     margin: 20px;
   }
   .recipeCategory {
     font-size: 16px;
+  }
+  .recipeCountry {
+    font-size: 24px;
   }
   .recipeName {
     font-size: 32px;

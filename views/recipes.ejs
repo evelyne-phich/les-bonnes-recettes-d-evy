@@ -13,6 +13,7 @@
     <div class="introduction">
         <div class="recipeTitle">
             <div class="recipeCategory"><%- recipe.category -%></div>
+            <div class="recipeCountry"><%- recipe.country -%></div>
             <div class="recipeName"><%- recipe.name -%></div>
             <div class="time">
               <div class="preparationTime"><i class="fas fa-mitten"></i><%- recipe.preparationTime -%></div>
@@ -24,7 +25,6 @@
             <div class="quantity"><%- recipe.quantity -%></div>
         </div>
         <img class="recipePhoto" src="<%- recipe.pictureUrl -%>"/>
-        <img class="recipePhotoMobile" src="<%- recipe.mobilePictureUrl -%>"/>
     </div>
     <div class="recipe">
         <ul class="ingredients">Ingrédients<hr>

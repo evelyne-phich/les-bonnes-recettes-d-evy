@@ -21,11 +21,9 @@ const recipes = [
     category: CATEGORY.STARTER,
     name: "Oeufs de cent ans",
     thumbnailPictureUrl:
-      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_256/v1613243723/PXL_20201124_183850908.PORTRAIT_uk155u.jpg",
+      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613243723/PXL_20201124_183850908.PORTRAIT_uk155u.jpg",
     pictureUrl:
-      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_358/v1613508634/PXL_20201124_183850908.PORTRAIT_qaxreq.jpg",
-    mobilePictureUrl:
-      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_256/v1613508634/PXL_20201124_183850908.PORTRAIT_qaxreq.jpg",
+      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613508634/PXL_20201124_183850908.PORTRAIT_qaxreq.jpg",
     country: COUNTRY.CHINESE,
     preparationTime: "15 min",
     restTime: "30 min",
@@ -54,11 +52,9 @@ const recipes = [
     category: CATEGORY.DISH,
     name: "Loc Lac",
     thumbnailPictureUrl:
-      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_256/v1613491099/PXL_20201121_182427531.PORTRAIT_1_g8defd.jpg",
+      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_584/v1613491099/PXL_20201121_182427531.PORTRAIT_1_g8defd.jpg",
     pictureUrl:
       "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_584/v1613491099/PXL_20201121_182427531.PORTRAIT_1_g8defd.jpg",
-    mobilePictureUrl:
-      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_256/v1613491099/PXL_20201121_182427531.PORTRAIT_1_g8defd.jpg",
     country: COUNTRY.INDOCHINESE,
     preparationTime: "20 min",
     cookingTime: "30 min",
@@ -103,11 +99,9 @@ const recipes = [
     category: CATEGORY.DISH,
     name: "Zha Jiang Mian",
     thumbnailPictureUrl:
-      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_256/v1613243456/149990910_1909050255915243_2559880426026161432_n_vzjh1u.jpg",
+      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613243456/149990910_1909050255915243_2559880426026161432_n_vzjh1u.jpg",
     pictureUrl:
-      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_368/v1613509187/149990910_1909050255915243_2559880426026161432_n_mxm0mu.jpg",
-    mobilePictureUrl:
-      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_256/v1613509187/149990910_1909050255915243_2559880426026161432_n_mxm0mu.jpg",
+      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613509187/149990910_1909050255915243_2559880426026161432_n_mxm0mu.jpg",
     country: COUNTRY.CHINESE,
     preparationTime: "30 min",
     cookingTime: "45 min",
@@ -162,11 +156,9 @@ const recipes = [
     category: CATEGORY.DISH,
     name: "Phô",
     thumbnailPictureUrl:
-      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_256/v1613239803/PXL_20201123_114903231_imx8m2.jpg",
+      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613239803/PXL_20201123_114903231_imx8m2.jpg",
     pictureUrl:
-      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_368/v1613509671/PXL_20201123_114903231_ljbsyr.jpg",
-    mobilePictureUrl:
-      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_256/v1613509671/PXL_20201123_114903231_ljbsyr.jpg",
+      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613509671/PXL_20201123_114903231_ljbsyr.jpg",
     country: COUNTRY.VIETNAMESE,
     preparationTime: "30 min",
     cookingTime: "3 H 00 min",
@@ -218,11 +210,9 @@ const recipes = [
     category: CATEGORY.DISH,
     name: "Couscous",
     thumbnailPictureUrl:
-      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_256/v1613239750/PXL_20201027_183743640_t7rwhs.jpg",
+      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613239750/PXL_20201027_183743640_t7rwhs.jpg",
     pictureUrl:
-      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_368/v1613664527/PXL_20201027_183743640_a7eewe.jpg",
-    mobilePictureUrl:
-      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_256/v1613664527/PXL_20201027_183743640_a7eewe.jpg",
+      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613664527/PXL_20201027_183743640_a7eewe.jpg",
     country: COUNTRY.MAGHREBIAN,
     preparationTime: "30 min",
     cookingTime: "35 min",
@@ -261,11 +251,9 @@ const recipes = [
     category: CATEGORY.DISH,
     name: "Risotto aux fruits de mer",
     thumbnailPictureUrl:
-      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_256/v1613247390/PXL_20201219_190638040_dqc5jb.jpg",
+      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613247390/PXL_20201219_190638040_dqc5jb.jpg",
     pictureUrl:
-      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_368/v1613247390/PXL_20201219_190638040_dqc5jb.jpg",
-    mobilePictureUrl:
-      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_256/v1613247390/PXL_20201219_190638040_dqc5jb.jpg",
+      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613247390/PXL_20201219_190638040_dqc5jb.jpg",
     country: COUNTRY.ITALIAN,
     preparationTime: "30 min",
     cookingTime: "30 min",
