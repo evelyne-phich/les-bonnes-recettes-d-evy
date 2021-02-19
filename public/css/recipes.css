@@ -1,7 +1,11 @@
 .introduction {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 40px;
+  margin-top: 20px;
+}
+.recipePhotoContainer {
+  display: flex;
+  align-items: center;
 }
 .recipePhoto {
   border-radius: 10px;
@@ -130,6 +134,7 @@ ol li::before {
   }
   .recipePhoto {
     margin: 20px;
+    width: calc(100% - 40px);
   }
   .recipePhoto:hover {
     transform: none;
