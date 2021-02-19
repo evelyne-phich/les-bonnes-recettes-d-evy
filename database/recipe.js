@@ -437,7 +437,7 @@ const recipes = [
       "Faire fondre le tout au micro-ondes à 500 W de puissance pendant 1 minute.",
       "Dans un saladier, ajouter le sucre et les oeufs, puis mélanger avec un fouet.",
       "Ajouter la farine et mélanger.",
-      "Beurrer le moule.",
+      "Beurrer un moule.",
       "Ajouter le mélange beurre/chocolat et mélanger.",
       "Verser la pâte dans le moule.",
       "Enfourner pendant 25 minutes.",
@@ -448,8 +448,23 @@ const recipes = [
     category: CATEGORY.DESSERT,
     name: "Cake à la banane et aux pépites de chocolat",
     thumbnailPictureUrl:
-      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_800/v1613250625/PXL_20201118_151233557.PORTRAIT_nbgupp.jpg",
+      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_584/v1613250625/PXL_20201118_151233557.PORTRAIT_nbgupp.jpg",
+    pictureUrl:
+      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_584/v1613764403/PXL_20201118_151233557.PORTRAIT_nbgupp_rfwimn.jpg",
     country: COUNTRY.FRENCH,
+    preparationTime: "10 min",
+    cookingTime: "25 min",
+    restTime: "0 min",
+    totalTime: "35 min",
+    quantity: "Pour 6 personnes",
+    ingredients: [
+      "150 g de beurre demi-sel",
+      "200 g de chocolat noir",
+      "30 g de sucre",
+      "3 oeufs",
+      "50 g de farine",
+    ],
+    instructions: ["Préchauffer le four à 150 °C."],
   },
   {
     id: 12,

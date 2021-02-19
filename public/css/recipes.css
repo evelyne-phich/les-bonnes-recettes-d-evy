@@ -6,7 +6,7 @@
 .recipePhoto {
   border-radius: 10px;
   transition: all 0.5s ease;
-  object-fit: cover;
+  object-fit: contain;
 }
 .recipePhoto:hover {
   transform: rotate(-5deg);
