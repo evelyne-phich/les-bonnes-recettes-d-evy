@@ -94,6 +94,7 @@
   background-color: rgb(34, 34, 34);
   padding: 40px;
   border-radius: 10px;
+  min-width: 200px;
 }
 .ingredients li {
   font-size: 18px;
