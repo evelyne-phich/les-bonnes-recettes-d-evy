@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const recipeResource = require("./resources/recipeResource");
 const { CATEGORY } = require("./database/recipe");
+const { recipes } = require("./database/recipe");
 
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
@@ -38,22 +39,26 @@ app.get("/", async (request, response) => {
   });
 });
 
-app.get("/recipe/:recipeId", async (request, response) => {
+app.get("/recipe/:recipeId", (request, response) => {
   const recipeId = request.params.recipeId;
+  const foundRecipe = recipes.find((recipe) => recipe.id == recipeId);
+  return response.render("recipes", { recipe: foundRecipe });
+});
 
-  if (!recipeId) {
-    return response.render("notFound", {});
+app.get("/login", (request, response) => {
+  return response.render("login");
+});
+
+app.post("/login", (request, response) => {
+  const correctUsername = "Miloca";
+  const correctPassword = "Miloco";
+  const username = request.body.username;
+  const password = request.body.password;
+  if (username === correctUsername && password === correctPassword) {
+    return response.render("admin");
+  } else {
+    return response.send("Erreur d'authentification");
   }
-
-  const recipe = await recipeResource.getRecipeById(recipeId);
-
-  if (!recipe) {
-    return response.render("notFound", {});
-  }
-
-  return response.render("recipes", {
-    recipe: recipe,
-  });
 });
 
 app.listen(PORT, () => {

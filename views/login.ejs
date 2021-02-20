@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+  <%- include("./partials/head") -%>
+
+  <body class="loginBody">
+
+<form class="form" action="/login" method="post">
+    <input class="username" type="text" placeholder="Identifiant" name="username" required id="username"><br>
+    <input class="password" type="password" placeholder="Mot de passe" name="password" required id="password"><br>
+    <input class="submit" type="submit" value="Connexion"><br>
+    <label>
+    <input type="checkbox" name="rememberMe" id="rememberMe">
+    Se souvenir de moi
+    </label>
+</form>
+
+
+
+  </body>
+
+</html>
