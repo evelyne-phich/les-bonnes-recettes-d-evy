@@ -553,7 +553,7 @@ const recipes = [
       "Ajouter le chocolat fondu à la pâte restante dans le saladier et mélanger.",
       "Verser la pâte au chocolat dans le moule.",
       "A l'aide d'un couteau, mélanger les 2 pâtes dans le moule en faisant des mouvements rapides de gauche à droite et de droite à gauche.",
-      "Enfourner pendant 40 minutes.",
+      "Enfourner pendant 35 minutes.",
     ],
   },
   {
@@ -597,8 +597,32 @@ const recipes = [
     category: CATEGORY.DESSERT,
     name: "Crêpes",
     thumbnailPictureUrl:
-      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_256/v1613250373/PXL_20201101_151424265_o5xjqp.jpg",
+      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613250373/PXL_20201101_151424265_o5xjqp.jpg",
+    pictureUrl:
+      "https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613829214/PXL_20201101_151424265_quxnso.jpg",
     country: COUNTRY.FRENCH,
+    preparationTime: "10 min",
+    cookingTime: "20 min",
+    restTime: "0 min",
+    totalTime: "30 min",
+    quantity: "Pour 12 crêpes",
+    ingredients: [
+      "50 g de beurre demi-sel",
+      "1 sachet de sucre vanillé",
+      "250 g de farine",
+      "4 oeufs",
+      "50 cl de lait",
+    ],
+    instructions: [
+      "Dans un bol, mettre le beurre et le faire fondre au micro-ondes à 500 W de puissance pendant 30 secondes.",
+      "Dans un saladier, mettre le sucre et la farine, puis mélanger.",
+      "Ajouter les oeufs et mélanger.",
+      "Verser le lait progressivement en mélangeant.",
+      "Ajouter le beurre fondu et mélanger.",
+      "Dans une poêle chauffée à feu doux et légèrement huilée, verser une louche de pâte et la répartir sur toute la surface en faisant un mouvement de rotation avec la poêle.",
+      "Lorsque le premier côté de la crêpe est cuit, la retourner et attendre jusqu'à ce que le deuxième côté soit cuit, puis déposer la crêpe sur une assiette.",
+      "Recommencer jusqu'à épuisement de la pâte.",
+    ],
   },
 ];
 
