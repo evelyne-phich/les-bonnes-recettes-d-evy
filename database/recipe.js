@@ -16,7 +16,7 @@ const COUNTRY = {
   FRENCH_JAPANESE: "Franco-Japonais",
 };
 
-const recipes = [
+let recipes = [
   {
     id: 1,
     category: CATEGORY.STARTER,
@@ -243,7 +243,7 @@ const recipes = [
       "Porter à ébullition, couvrir partiellement et laisser mijoter à feu doux pendant 35 minutes.",
       "Dans un saladier, verser autant de verres de couscous que de verres d'eau, puis couvrir et laisser gonfler.",
       "Préchauffer le four à 200 °C. Placer les chipolatas dans un plat et les enfourner pendant 20 minutes.",
-      "Juste avant le service, égrener la semoule, ajouter du beurre et chauffer au micro-ondes pendant 2 minutes.",
+      "Juste avant le service, égrener la semoule, chauffer au micro-ondes pendant 2 minutes, puis ajouter du beurre et mélanger.",
     ],
   },
   {
