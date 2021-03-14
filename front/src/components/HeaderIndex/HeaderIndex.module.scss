@@ -1,0 +1,124 @@
+.header {
+    background-color: black;
+    box-shadow: 10px 5px 5px black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 40px;
+    text-shadow: 0 0 10px rgb(182, 7, 65);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: calc(100% - 40px);
+    padding: 20px;
+    z-index: 1;
+}
+.menu {
+  display: flex;
+}
+.homeLink {
+  width: 54px;
+  height: 54px;
+  border: 1px solid rgb(182, 7, 65);
+  background: rgb(182, 7, 65);
+  color: white;
+  border-radius: 10px 10px 10px 10px;
+  cursor: pointer;
+  font-size: 30px;
+  transition: 0.3s;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-shadow: none;
+}
+.homeLink:hover {
+  background: white;
+  opacity: 0.9;
+  color: rgb(182, 7, 65);
+}
+.filterButton {
+  width: 56px;
+  height: 56px;
+  border: 1px solid rgb(182, 7, 65);
+  background: rgb(182, 7, 65);
+  color: white;
+  border-radius: 10px 10px 10px 10px;
+  cursor: pointer;
+  font-size: 30px;
+  transition: 0.3s;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 16px;
+}
+.filterButton:hover {
+  background: white;
+  opacity: 0.9;
+  color: rgb(182, 7, 65);
+}
+.searchBar {
+  display: flex;
+}
+.search {
+  font-size: 18px;
+  border: 1px solid rgb(182, 7, 65);
+  border-right: none;
+  padding: 10px;
+  border-radius: 10px 0px 0px 10px;
+  background-color: rgb(212, 212, 212);
+  outline: none;
+  margin-left: 16px;
+}
+.searchButton {
+  width: 56px;
+  height: 56px;
+  border: 1px solid rgb(182, 7, 65);
+  background: rgb(182, 7, 65);
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  font-size: 40px;
+  transition: 0.3s;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchButton:hover {
+  background: white;
+  opacity: 0.9;
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    font-size: 24px;
+    justify-content: unset;
+    height: 80px;
+  }
+  .menu {
+    height: 32px;
+    margin-top: 20px;
+  }
+  .homeLink {
+    height: 30px;
+    width: 30px;
+    font-size: 18px;
+  }
+  .filterButton {
+    height: 32px;
+    width: 32px;
+    font-size: 18px;
+  }
+  .search {
+    font-size: 14px;
+  }
+  .searchButton {
+    height: 32px;
+    width: 32px;
+    font-size: 18px;
+  }
+}

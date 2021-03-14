@@ -1,0 +1,15 @@
+.updateRecipeBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.form input {
+  border-radius: 10px;
+  text-align: center;
+}
