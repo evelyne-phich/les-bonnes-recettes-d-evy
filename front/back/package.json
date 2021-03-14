@@ -1,0 +1,31 @@
+{
+  "name": "les-bonnes-recettes-d-evy-back",
+  "version": "0.1.0",
+  "description": "API of Les bonnes recettes d'evy",
+  "main": "server.js",
+  "scripts": {
+    "create-pr": "node ./scripts/issue-to-pr.js",
+    "dev": "nodemon server.js",
+    "start": "nodemon server.js",
+    "test": "npx jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evelyne-phich/les-bonnes-recettes-d-evy.git"
+  },
+  "keywords": [
+    "api",
+    "node",
+    "js",
+    "express",
+    "mongoose",
+    "cooking",
+    "recipe"
+  ],
+  "author": "Evelyne PHICH",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/evelyne-phich/les-bonnes-recettes-d-evy/issues"
+  },
+  "homepage": "https://github.com/evelyne-phich/les-bonnes-recettes-d-evy#readme"
+}
