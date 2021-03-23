@@ -1,28 +1,23 @@
 import React from "react";
-import { CATEGORY, recipes } from "./database/recipes";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import HeaderIndex from "./components/HeaderIndex";
-import RecipeCardsList from "./components/RecipeCardsList";
-import styles from "./App.module.scss";
+import Header from "./components/Header";
+import Home from "./pages/Home";
+import RecipePage from "./pages/RecipePage";
 
 function App() {
   return (
-    <div>
-      <HeaderIndex />
-      <RecipeCardsList
-        recipes={recipes.filter(
-          (recipe) => recipe.category === CATEGORY.STARTER
-        )}
-      />
-      <RecipeCardsList
-        recipes={recipes.filter((recipe) => recipe.category === CATEGORY.DISH)}
-      />
-      <RecipeCardsList
-        recipes={recipes.filter(
-          (recipe) => recipe.category === CATEGORY.DESSERT
-        )}
-      />
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" exact>
+          <Home />
+        </Route>
+        <Route path="/recipe/:id" exact>
+          <Header searchBarIsHidden={true} filterButtonIsHidden={true} />
+          <RecipePage />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

@@ -13,9 +13,21 @@
     width: calc(100% - 40px);
     padding: 20px;
     z-index: 1;
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+        font-size: 24px;
+        justify-content: unset;
+        height: 80px;
+    }
 }
 .menu {
   display: flex;
+
+  @media (max-width: 480px) {
+      height: 32px;
+      margin-top: 20px;
+    }
 }
 .homeLink {
   width: 54px;
@@ -33,6 +45,12 @@
   align-items: center;
   text-decoration: none;
   text-shadow: none;
+
+  @media (max-width: 480px) {
+      height: 30px;
+      width: 30px;
+      font-size: 18px;
+    }
 }
 .homeLink:hover {
   background: white;
@@ -54,6 +72,12 @@
   justify-content: center;
   align-items: center;
   margin-left: 16px;
+
+  @media (max-width: 480px) {
+      height: 32px;
+      width: 32px;
+      font-size: 18px;
+    }
 }
 .filterButton:hover {
   background: white;
@@ -61,64 +85,22 @@
   color: rgb(182, 7, 65);
 }
 .searchBar {
-  display: flex;
-}
-.search {
-  font-size: 18px;
-  border: 1px solid rgb(182, 7, 65);
-  border-right: none;
-  padding: 10px;
-  border-radius: 10px 0px 0px 10px;
-  background-color: rgb(212, 212, 212);
-  outline: none;
-  margin-left: 16px;
-}
-.searchButton {
-  width: 56px;
-  height: 56px;
-  border: 1px solid rgb(182, 7, 65);
-  background: rgb(182, 7, 65);
-  border-radius: 0 10px 10px 0;
-  cursor: pointer;
-  font-size: 40px;
-  transition: 0.3s;
-  outline: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.searchButton:hover {
-  background: white;
-  opacity: 0.9;
-}
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 8px;
+    border-radius: 10px !important;
+    margin-left: 16px;
+    .input {
+      width: 178px;
+      color: rgb(182, 7, 65);
 
-@media (max-width: 480px) {
-  .header {
-    flex-direction: column;
-    font-size: 24px;
-    justify-content: unset;
-    height: 80px;
-  }
-  .menu {
-    height: 32px;
-    margin-top: 20px;
-  }
-  .homeLink {
-    height: 30px;
-    width: 30px;
-    font-size: 18px;
-  }
-  .filterButton {
-    height: 32px;
-    width: 32px;
-    font-size: 18px;
-  }
-  .search {
-    font-size: 14px;
-  }
-  .searchButton {
-    height: 32px;
-    width: 32px;
-    font-size: 18px;
-  }
+      @media (max-width: 480px) {
+        width: 156px;
+        ::placeholder {
+          font-size: 14px;
+          color: rgb(182, 7, 65);
+        }
+      }
+    }
 }

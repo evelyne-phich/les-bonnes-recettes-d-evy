@@ -1,0 +1,48 @@
+.view {
+  padding : 20px 0 20px 0;
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  
+  @media (max-width: 480px) {
+      button {
+        font-size: 16px;
+        padding: 8px 10px;
+        margin: 5px;
+      }
+    }
+
+  ul {
+    margin: 0;
+  }
+  ul li {
+    text-align: center;
+  }
+  button {
+    font-size: 32px;
+    background-color: rgb(48, 48, 48);
+    border-radius: 10px 10px 10px 10px;
+    color: white;
+    padding: 2px 5px;
+    margin: 5px;
+    outline: none;
+    border: none;
+    transition: all 250ms ease;
+  }
+  button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+  .category {
+    text-align: center;
+  }
+  .categoryButton {
+    color: rgb(182, 7, 65);
+    background-color: rgb(214, 214, 214);
+  }
+  .categoryButton:hover {
+    color: rgb(182, 7, 65);
+  }  
+}
