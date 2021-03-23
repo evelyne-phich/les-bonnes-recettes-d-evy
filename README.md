@@ -6,8 +6,11 @@
 
 - Installer react-router-dom dans le répertoire `./front`
 
+## How to setup deployment
+
+- git remote add heroku https://git.heroku.com/les-bonnes-recettes-d-evy.git
+- Add buildpack on heroku: https://buildpack-registry.s3.amazonaws.com/buildpacks/mars/create-react-app.tgz
+
 ## How to deploy
 
-- git remote add les-bonnes-recettes-d-evy https://git.heroku.com/les-bonnes-recettes-d-evy.git
-- heroku config:set -a les-bonnes-recettes-d-evy APP_BASE=front
-- heroku buildpacks:add -a les-bonnes-recettes-d-evy https://github.com/lstoll/heroku-buildpack-monorepo -i 1
+- git push heroku main
