@@ -1,3 +1,5 @@
 node_modules
 .env
 sqlGenerator.js
+npm-debug.log
+.DS_Store
