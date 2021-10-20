@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les bonnes recettes d'Evy</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/389e541470.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Les bonnes recettes d'Evy</h1>
+        <nav class="navBar">
+            <a class="homeButton" href="/"><i class="fas fa-home"></i></a>
+            <select class="recipeCategory" name="recipeCategory">
+                <option value="Toutes les catégories">Toutes les catégories</option>
+                <option value="Entrée">Entrées</option>
+                <option value="Plat">Plats</option>
+                <option value="Dessert">Desserts</option>
+            </select>
+            <select class="recipeCountry" name="recipeCountry">
+                <option value="Tous les types de cuisine">Tous les types de cuisine</option>
+                    <% for (const country of countries) { %>
+                        <option value="<%= country %>"><%= country %></option>
+                    <% } %>
+            </select>
+            <div class="search">
+                <input type="text" name="search" placeholder="Rechercher une recette"/>
+            </div>
+        </nav>
+    </header>
