@@ -26,8 +26,8 @@ const mainController = {
     //   });
     // });
     res.render("homePage", {
-      recipes,
-      countries,
+      recipes: [],
+      countries: [],
     });
   },
 };
