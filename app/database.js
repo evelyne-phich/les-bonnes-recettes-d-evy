@@ -6,8 +6,7 @@ const client = new Client({
     rejectUnauthorized: false,
   },
 });
-console.log("before");
+
 client.connect();
-console.log("after");
 
 module.exports = client;
