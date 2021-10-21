@@ -8,21 +8,9 @@ const mainController = {
       }
 
       const recipes = result.rows;
-      const countries = [];
-
-      for (const recipe of recipes) {
-        if (
-          !countries.find(
-            (country) => recipe.country.toLowerCase() === country.toLowerCase()
-          )
-        ) {
-          countries.push(recipe.country);
-        }
-      }
 
       res.render("homePage", {
         recipes,
-        countries,
       });
     });
   },

@@ -1,3 +1,13 @@
 <%- include('partials/header') %>
 
+<div class="homePageRecipes">
+    <% for (const recipe of recipes) { %>
+        <div class="homePageRecipe">
+            <img src="<%= recipe.thumbnailPictureUrl %>">
+            <h2 class="homePageRecipeCategory"><%= recipe.category %></h2>
+            <h3 class="homePageRecipeName"><%= recipe.name %></h3>
+        </div>
+    <% } %>
+</div>
+
 <%- include('partials/footer') %>
