@@ -17,6 +17,10 @@ const mainController = {
   getRecipesByCategory: (req, res) => {
     const category = req.query.category;
 
+    if (category === "Toutes-les-catégories") {
+      return res.redirect("/");
+    }
+
     dataMapper.getRecipesByCategory(category, (err, result) => {
       if (err) {
         return console.error(err);
