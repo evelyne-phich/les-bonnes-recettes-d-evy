@@ -1,5 +1,24 @@
 const dataMapper = require("../dataMapper");
 
+const categories = [
+  {
+    value: "Toutes-les-catégories",
+    label: "Toutes les catégories",
+  },
+  {
+    value: "Entrée",
+    label: "Entrées",
+  },
+  {
+    value: "Plat",
+    label: "Plats",
+  },
+  {
+    value: "Dessert",
+    label: "Desserts",
+  },
+];
+
 const mainController = {
   getHomePage: (req, res) => {
     dataMapper.getAllRecipes((err, result) => {
@@ -11,6 +30,7 @@ const mainController = {
 
       res.render("homePage", {
         recipes,
+        categories,
       });
     });
   },
@@ -30,6 +50,8 @@ const mainController = {
 
       res.render("homePage", {
         recipes: recipesByCategory,
+        selectedCategory: category,
+        categories,
       });
     });
   },

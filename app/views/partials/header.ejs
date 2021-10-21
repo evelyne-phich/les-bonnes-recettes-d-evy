@@ -20,13 +20,15 @@
             <div class="forms">
                 <form action="/category" method="GET">
                     <select onchange="this.form.submit()" class="recipeCategory" name="category">
-                        <option value="Toutes-les-catégories" disabled selected hidden>Toutes les catégories</option>
-                        <option value="Toutes-les-catégories">Toutes les catégories</option>
-                        <option value="Entrée">Entrées</option>
-                        <option value="Plat">Plats</option>
-                        <option value="Dessert">Desserts</option>
+                        <option value="Toutes-les-catégories" disabled hidden>Toutes les catégories</option>
+                        <% for (const category of categories) { %>
+                            <% if(typeof selectedCategory == "undefined" || selectedCategory !== category.value) { %>
+                                <option value="<%= category.value %>"><%= category.label %></option>
+                            <% } else if (selectedCategory === category.value) { %>
+                                    <option value="<%= category.value %>" selected><%= category.label %></option>
+                            <% } %>
+                        <% } %>
                     </select>
-                    <!-- <input type="submit" style="display: none;"> -->
                 </form>
                     <select class="recipeCountry" name="country">
                         <option value="tous-les-types-de-cuisine">Tous les types de cuisine</option>
