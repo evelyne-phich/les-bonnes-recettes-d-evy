@@ -148,6 +148,7 @@ header {
     .navBar {
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
     .homeButton, .search input {
         border-radius: 10px;

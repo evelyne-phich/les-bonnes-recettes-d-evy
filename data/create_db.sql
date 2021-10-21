@@ -4,7 +4,6 @@ CREATE TABLE "recipe"(
     "id" SERIAL PRIMARY KEY,
     "category" text,
     "name" text,
-    "thumbnailPictureUrl" text,
     "pictureUrl" text,
     "country" text,
     "preparationTime" text,
@@ -20,7 +19,6 @@ INSERT INTO "recipe"
 (
 "category",
 "name",
-"thumbnailPictureUrl",
 "pictureUrl",
 "country",
 "preparationTime",
@@ -35,7 +33,6 @@ VALUES
 (
 'Entrée',
 'Oeufs de cent ans',
-'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613243723/PXL_20201124_183850908.PORTRAIT_uk155u.jpg',
 'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613508634/PXL_20201124_183850908.PORTRAIT_qaxreq.jpg',
 'Chinois',
 '15 min',
@@ -50,7 +47,6 @@ VALUES
 'Plat',
 'Loc Lac',
 'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_584/v1613491099/PXL_20201121_182427531.PORTRAIT_1_g8defd.jpg',
-'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_584/v1613491099/PXL_20201121_182427531.PORTRAIT_1_g8defd.jpg',
 'Indochinois',
 '20 min',
 '1 H 00 min',
@@ -63,7 +59,6 @@ VALUES
 (
 'Plat',
 'Zha Jiang Mian',
-'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613243456/149990910_1909050255915243_2559880426026161432_n_vzjh1u.jpg',
 'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613509187/149990910_1909050255915243_2559880426026161432_n_mxm0mu.jpg',
 'Chinois',
 '30 min',
@@ -77,7 +72,6 @@ VALUES
 (
 'Plat',
 'Phô',
-'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613239803/PXL_20201123_114903231_imx8m2.jpg',
 'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613509671/PXL_20201123_114903231_ljbsyr.jpg',
 'Vietnamien',
 '30 min',
@@ -91,7 +85,6 @@ VALUES
 (
 'Plat',
 'Couscous',
-'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613239750/PXL_20201027_183743640_t7rwhs.jpg',
 'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613664527/PXL_20201027_183743640_a7eewe.jpg',
 'Maghrébin',
 '30 min',
@@ -106,7 +99,6 @@ VALUES
 'Plat',
 'Risotto aux fruits de mer',
 'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613247390/PXL_20201219_190638040_dqc5jb.jpg',
-'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613247390/PXL_20201219_190638040_dqc5jb.jpg',
 'Italien',
 '30 min',
 '0 min',
@@ -120,7 +112,6 @@ VALUES
 'Plat',
 'Risotto au parmesan et aux champignons',
 'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613250039/PXL_20201116_184513904_zjtt8k.jpg',
-'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613250039/PXL_20201116_184513904_zjtt8k.jpg',
 'Italien',
 '15 min',
 '0 min',
@@ -133,7 +124,6 @@ VALUES
 (
 'Plat',
 'Paella',
-'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613728911/PXL_20210216_182309380.PORTRAIT_o4nic4.jpg',
 'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613729005/PXL_20210216_182309380.PORTRAIT_k7iro8.jpg',
 'Espagnol',
 '35 min',
@@ -148,7 +138,6 @@ VALUES
 'Dessert',
 'Cookies aux pépites de chocolat',
 'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613744877/20200427_165819_barwxx.jpg',
-'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613744877/20200427_165819_barwxx.jpg',
 'Américain',
 '20 min',
 '0 min',
@@ -162,7 +151,6 @@ VALUES
 'Dessert',
 'Fondant au chocolat',
 'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613748985/20200617_164244_bgwuss.jpg',
-'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613748985/20200617_164244_bgwuss.jpg',
 'Français',
 '15 min',
 '0 min',
@@ -175,7 +163,6 @@ VALUES
 (
 'Dessert',
 'Cake aux bananes et aux pépites de chocolat',
-'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_584/v1613250625/PXL_20201118_151233557.PORTRAIT_nbgupp.jpg',
 'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_584/v1613764403/PXL_20201118_151233557.PORTRAIT_nbgupp_rfwimn.jpg',
 'Français',
 '15 min',
@@ -190,7 +177,6 @@ VALUES
 'Dessert',
 'Cake au matcha et aux framboises',
 'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_584/v1613251982/20200530_125217_fgt9ya.jpg',
-'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_584/v1613251982/20200530_125217_fgt9ya.jpg',
 'Franco-Japonais',
 '15 min',
 '0 min',
@@ -203,7 +189,6 @@ VALUES
 (
 'Dessert',
 'Cake marbré au chocolat',
-'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_584/v1613251769/20200529_151900_i5y051.jpg',
 'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_584/v1613251769/20200529_151900_i5y051.jpg',
 'Français',
 '15 min',
@@ -218,7 +203,6 @@ VALUES
 'Dessert',
 'Cake aux myrtilles',
 'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_584/v1613252173/20200704_122544_wymbci.jpg',
-'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_584/v1613252173/20200704_122544_wymbci.jpg',
 'Français',
 '15 min',
 '0 min',
@@ -231,7 +215,6 @@ VALUES
 (
 'Dessert',
 'Crêpes',
-'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613250373/PXL_20201101_151424265_o5xjqp.jpg',
 'https://res.cloudinary.com/dvpcjyb48/image/upload/c_scale,w_400/v1613829214/PXL_20201101_151424265_quxnso.jpg',
 'Français',
 '10 min',
@@ -241,4 +224,4 @@ VALUES
 'Pour 12 crêpes',
 '{50 g de beurre demi-sel, 1 sachet de sucre vanillé, 250 g de farine, 4 oeufs, 50 cl de lait}',
 '{Dans un bol\, mettre le beurre et le faire fondre au micro-ondes à 500 W de puissance pendant 30 secondes., Dans un saladier\, mettre le sucre et la farine\, puis mélanger., Ajouter les oeufs et mélanger., Verser le lait progressivement en mélangeant., Ajouter le beurre fondu et mélanger., Dans une poêle chauffée à feu doux et légèrement huilée\, verser une louche de pâte et la répartir sur toute la surface en faisant un mouvement de rotation avec la poêle., Lorsque le premier côté de la crêpe est cuit\, la retourner et attendre jusqu''à ce que le deuxième côté soit cuit\, puis déposer la crêpe sur une assiette., Recommencer jusqu''à épuisement de la pâte.}'
-);
+)
