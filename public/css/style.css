@@ -47,7 +47,7 @@ header {
     opacity: 0.9;
     color: rgb(182, 7, 65);
 }
-.selects {
+.forms {
     display: flex;
 }
 .recipeCategory, .recipeCountry {
@@ -182,7 +182,7 @@ header {
         border-radius: 15px;
     }
     .homePageRecipeCategory, .homePageRecipeName {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
     .arrowUp {
         bottom: 20px;

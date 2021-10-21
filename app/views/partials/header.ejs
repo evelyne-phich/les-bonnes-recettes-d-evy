@@ -17,25 +17,28 @@
         <a class="homeButton" href="/"><i class="fas fa-home"></i></a>
         <h1 class="title">Les bonnes recettes d'Evy</h1>
         <nav class="navBar">
-            <div class="selects">
-                <select class="recipeCategory" name="recipeCategory">
-                    <option value="toutes-les-categories">Toutes les catégories</option>
-                    <option value="entree">Entrées</option>
-                    <option value="plat">Plats</option>
-                    <option value="dessert">Desserts</option>
-                </select>
-                <select class="recipeCountry" name="recipeCountry">
-                    <option value="tous-les-types-de-cuisine">Tous les types de cuisine</option>
-                    <option value="americain">Américain</option>
-                    <option value="chinois">Chinois</option>
-                    <option value="espagnol">Espagnol</option>
-                    <option value="francais">Français</option>
-                    <option value="franco-japonais">Franco-Japonais</option>
-                    <option value="indochinois">Indochinois</option>
-                    <option value="italien">Italien</option>
-                    <option value="maghrebin">Maghrébin</option>
-                    <option value="vietnamien">Vietnamien</option>
-                </select>
+            <div class="forms">
+                <form action="/category" method="GET">
+                    <select onchange="this.form.submit()" class="recipeCategory" name="category">
+                        <option value="Toutes-les-catégories">Toutes les catégories</option>
+                        <option value="Entrée">Entrées</option>
+                        <option value="Plat">Plats</option>
+                        <option value="Dessert">Desserts</option>
+                    </select>
+                    <!-- <input type="submit" style="display: none;"> -->
+                </form>
+                    <select class="recipeCountry" name="country">
+                        <option value="tous-les-types-de-cuisine">Tous les types de cuisine</option>
+                        <option value="americain">Américain</option>
+                        <option value="chinois">Chinois</option>
+                        <option value="espagnol">Espagnol</option>
+                        <option value="francais">Français</option>
+                        <option value="franco-japonais">Franco-Japonais</option>
+                        <option value="indochinois">Indochinois</option>
+                        <option value="italien">Italien</option>
+                        <option value="maghrebin">Maghrébin</option>
+                        <option value="vietnamien">Vietnamien</option>
+                    </select>
             </div>
             <div class="search">
                 <input type="text" name="search" placeholder="Rechercher une recette"/>
