@@ -7,9 +7,26 @@ const dataMapper = {
     client.query(query, callback);
   },
   getRecipesByCategory: (category, callback) => {
-    const query = `SELECT "recipe"."pictureUrl", "recipe"."category", "recipe"."name" FROM "recipe" WHERE "recipe"."category" = $1`;
+    if (category === "Toutes-les-catégories") {
+      const query = `SELECT "recipe"."pictureUrl", "recipe"."category", "recipe"."name" FROM "recipe"`;
 
-    client.query(query, [category], callback);
+      client.query(query, callback);
+    } else {
+      const query = `SELECT "recipe"."pictureUrl", "recipe"."category", "recipe"."name" FROM "recipe" WHERE "recipe"."category" = $1`;
+
+      client.query(query, [category], callback);
+    }
+  },
+  getRecipesByCountry: (country, callback) => {
+    if (country === "Tous-les-types-de-cuisine") {
+      const query = `SELECT "recipe"."pictureUrl", "recipe"."category", "recipe"."name" FROM "recipe"`;
+
+      client.query(query, callback);
+    } else {
+      const query = `SELECT "recipe"."pictureUrl", "recipe"."category", "recipe"."name" FROM "recipe" WHERE "recipe"."country" = $1`;
+
+      client.query(query, [country], callback);
+    }
   },
 };
 

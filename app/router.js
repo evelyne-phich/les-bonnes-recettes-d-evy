@@ -5,6 +5,6 @@ const mainController = require("./controllers/mainController");
 const filterController = require("./controllers/filterController");
 
 router.get("/", mainController.getHomePage);
-router.get("/filter", filterController.getRecipesByCategory);
+router.get("/filter", filterController.getRecipesByCategoryAndCountry);
 
 module.exports = router;

@@ -21,24 +21,22 @@
                 <select onchange="this.form.submit()" class="recipeCategory" name="category">
                     <option value="Toutes-les-catégories" disabled hidden>Toutes les catégories</option>
                     <% for (const category of categories) { %>
-                        <% if(typeof selectedCategory == "undefined" || selectedCategory !== category.value) { %>
+                        <% if (typeof selectedCategory == "undefined" || selectedCategory !== category.value) { %>
                             <option value="<%= category.value %>"><%= category.label %></option>
                         <% } if (selectedCategory === category.value) { %>
                                 <option value="<%= category.value %>" selected><%= category.label %></option>
                         <% } %>
                     <% } %>
                 </select>
-                <select class="recipeCountry" name="country">
-                    <option value="tous-les-types-de-cuisine">Tous les types de cuisine</option>
-                    <option value="americain">Américain</option>
-                    <option value="chinois">Chinois</option>
-                    <option value="espagnol">Espagnol</option>
-                    <option value="francais">Français</option>
-                    <option value="franco-japonais">Franco-Japonais</option>
-                    <option value="indochinois">Indochinois</option>
-                    <option value="italien">Italien</option>
-                    <option value="maghrebin">Maghrébin</option>
-                    <option value="vietnamien">Vietnamien</option>
+                <select onchange="this.form.submit()" class="recipeCountry" name="country">
+                    <option value="Tous-les-types-de-cuisine" disabled hidden>Tous les types de cuisine</option>
+                    <% for (const country of countries) { %>
+                        <% if (typeof selectedCountry == "undefined" || selectedCountry !== country.value) { %>
+                            <option value="<%= country.value %>"><%= country.label %></option>
+                        <% } if (selectedCountry === country.value) { %>
+                                <option value="<%= country.value %>" selected><%= country.label %></option>
+                        <% } %>
+                    <% } %>
                 </select>
             </form>
             <div class="search">

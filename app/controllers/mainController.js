@@ -1,29 +1,16 @@
 const dataMapper = require("../dataMapper");
 
-const categories = [
-  {
-    value: "Toutes-les-catégories",
-    label: "Toutes les catégories",
-  },
-  {
-    value: "Entrée",
-    label: "Entrées",
-  },
-  {
-    value: "Plat",
-    label: "Plats",
-  },
-  {
-    value: "Dessert",
-    label: "Desserts",
-  },
-];
+const { categories, countries } = require("../data-categories-countries");
 
 const mainController = {
   getHomePage: (req, res) => {
     const category = req.query.category;
+    const country = req.query.country;
 
-    if (category === "Toutes-les-catégories") {
+    if (
+      category === "Toutes-les-catégories" &&
+      country === "Tous-les-types-de-cuisine"
+    ) {
       return res.redirect("/");
     }
 
@@ -37,7 +24,9 @@ const mainController = {
       res.render("homePage", {
         recipes,
         selectedCategory: category,
+        selectedCountry: country,
         categories,
+        countries,
       });
     });
   },
