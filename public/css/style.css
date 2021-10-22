@@ -47,7 +47,7 @@ header {
     opacity: 0.9;
     color: rgb(182, 7, 65);
 }
-.forms {
+.form {
     display: flex;
 }
 .recipeCategory, .recipeCountry {

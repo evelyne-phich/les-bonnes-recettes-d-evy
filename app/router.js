@@ -2,8 +2,9 @@ const express = require("express");
 const router = express.Router();
 
 const mainController = require("./controllers/mainController");
+const filterController = require("./controllers/filterController");
 
 router.get("/", mainController.getHomePage);
-router.get("/category", mainController.getRecipesByCategory);
+router.get("/filter", filterController.getRecipesByCategory);
 
 module.exports = router;

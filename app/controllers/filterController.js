@@ -19,28 +19,28 @@ const categories = [
   },
 ];
 
-const mainController = {
-  getHomePage: (req, res) => {
+const filterController = {
+  getRecipesByCategory: (req, res) => {
     const category = req.query.category;
 
     if (category === "Toutes-les-catégories") {
       return res.redirect("/");
     }
 
-    dataMapper.getAllRecipes((err, result) => {
+    dataMapper.getRecipesByCategory(category, (err, result) => {
       if (err) {
         return console.error(err);
       }
 
-      const recipes = result.rows;
+      const recipesByCategory = result.rows;
 
       res.render("homePage", {
-        recipes,
+        recipes: recipesByCategory,
         selectedCategory: category,
-        categories,
+        categories: categories,
       });
     });
   },
 };
 
-module.exports = mainController;
+module.exports = filterController;
