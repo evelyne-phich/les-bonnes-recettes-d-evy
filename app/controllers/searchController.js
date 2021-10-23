@@ -2,12 +2,13 @@ const dataMapper = require("../dataMapper");
 
 const { categories, countries } = require("../data-categories-countries");
 
-const mainController = {
-  getHomePage: (req, res) => {
+const searchController = {
+  getRecipesByName: (req, res) => {
     const category = req.query.category;
     const country = req.query.country;
+    const recipeName = req.query.name;
 
-    dataMapper.getAllRecipes((err, result) => {
+    dataMapper.getRecipesByName(recipeName, (err, result) => {
       if (err) {
         return console.error(err);
       }
@@ -20,9 +21,10 @@ const mainController = {
         selectedCountry: country,
         categories,
         countries,
+        recipeName,
       });
     });
   },
 };
 
-module.exports = mainController;
+module.exports = searchController;

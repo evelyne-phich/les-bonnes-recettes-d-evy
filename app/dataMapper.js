@@ -28,6 +28,11 @@ const dataMapper = {
       client.query(query, [country], callback);
     }
   },
+  getRecipesByName: (recipeName, callback) => {
+    const query = `SELECT "recipe"."pictureUrl", "recipe"."category", "recipe"."name" FROM "recipe" WHERE unaccent("recipe"."name") ILIKE unaccent($1)`;
+
+    client.query(query, [`%${recipeName}%`], callback);
+  },
 };
 
 module.exports = dataMapper;

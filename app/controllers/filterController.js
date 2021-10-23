@@ -44,8 +44,8 @@ const filterController = {
           recipes: filteredRecipes,
           selectedCategory: category,
           selectedCountry: country,
-          categories: categories,
-          countries: countries,
+          categories,
+          countries,
         });
       });
     });

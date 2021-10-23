@@ -1,3 +1,5 @@
+CREATE EXTENSION unaccent;
+
 DROP TABLE IF EXISTS "recipe";
 
 CREATE TABLE "recipe"(
