@@ -15,6 +15,9 @@ button {
     text-shadow: 0px 0px 0px transparent;
     padding: 0;
 }
+a {
+    text-decoration: none;
+}
 
 /* HEADER */
 h1 {
@@ -47,7 +50,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
 }
 .searchButton {
     border-radius: 0 10px 10px 0;

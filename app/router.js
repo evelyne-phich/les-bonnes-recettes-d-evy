@@ -4,9 +4,11 @@ const router = express.Router();
 const mainController = require("./controllers/mainController");
 const filterController = require("./controllers/filterController");
 const searchController = require("./controllers/searchController");
+const recipeController = require("./controllers/recipeController");
 
 router.get("/", mainController.getHomePage);
 router.get("/filter", filterController.getRecipesByCategoryAndCountry);
-router.get("/search/name", searchController.getRecipesByName);
+router.get("/search", searchController.getRecipesByName);
+router.get("/recipe/:id", recipeController.getRecipeById);
 
 module.exports = router;

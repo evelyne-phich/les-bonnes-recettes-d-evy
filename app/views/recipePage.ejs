@@ -1,0 +1,39 @@
+<%- include('partials/header') %>
+
+<main class="recipePage">
+    <div class="recipePageTop">
+        <div class="recipePageIntroduction">
+            <div class="recipePageTitle">
+                <h2 class="category"><%= recipe.category %></h2>
+                <h3 class="country"><%= recipe.country %></h3>
+                <h4 class="name"><%= recipe.name %></h4>
+            </div>
+            <div class="recipePageQuantity"><%= recipe.quantity %></div>
+            </div>
+            <div class="recipePageTime">
+                <div class="preparationTime"><i class="fas fa-mitten"></i><%= recipe.preparationTime %></div>
+                <div class="restTime"><i class="far fa-pause-circle"></i><%= recipe.restTime %></div>
+                <div class="cookingTime"><i class="fab fa-hotjar"></i><%= recipe.cookingTime %></div>
+                <div class="totalTime"><i class="far fa-clock"></i><%= recipe.totalTime %></div>
+            </div>
+        </div>
+        <img class="recipePageImage" src="<%= recipe.pictureUrl %>">
+    </div>
+    <div class="recipePageBottom">
+        <ul class="recipePageIngredients">
+            <% for (const ingredient of recipe.ingredients) { %>
+                <li><%= ingredient %></li>
+            <% } %>
+        </ul>
+        <ol class="recipePageInstructions">
+            <% for (const instruction of recipe.instructions) { %>
+                <li><%= instruction %></li>
+            <% } %>
+        </ol>
+    </div>
+</main>
+<a href="#arrowUp">
+    <img class="arrowUp" src="/images/arrow_upward.svg">
+</a>
+
+<%- include('partials/footer') %>
