@@ -173,16 +173,16 @@ header {
     flex-direction: column;
     align-items: center;
 }
-.recipePageTitle .category, .recipePageTitle .name, .recipePageTime .timeIcon {
+.recipePageIntroduction .title .category, .recipePageIntroduction .title .name, .recipePageIntroduction .time .timeIcon {
     color: rgb(182, 7, 65);
 }
-.recipePageQuantity {
+.recipePageIntroduction .quantity {
     margin-bottom: 20px;
 }
-.recipePageTime .timeIcon {
+.recipePageIntroduction .time .timeIcon {
     margin-right: 10px;
 }
-.recipePageTime .preparationTime, .recipePageTime .restTime, .recipePageTime .cookingTime, .recipePageTime .totalTime {
+.recipePageIntroduction .time .preparationTime, .recipePageIntroduction .time .restTime, .recipePageIntroduction .time .cookingTime, .recipePageIntroduction .time .totalTime {
     display: flex;
     justify-content: space-between;
 }
@@ -298,5 +298,40 @@ header {
         bottom: 20px;
         right: 10px;
         padding: 10px;
+    }
+
+    /* RECIPE PAGE */
+    .recipePage {
+        margin-top: 20px;
+    }
+    .recipePageTopContainer {
+        flex-direction: column;
+    }
+    .recipePageIntroduction .title .category, .recipePageIntroduction .title .country, .recipePageIntroduction .title .name {
+        font-size: 1.5rem;
+        margin: 0 0 20px 0;
+    }
+    .recipePageImage {
+        height: 80%;
+        width: 80%;
+        margin-top: 20px;
+    }
+    .recipePageBottomContainer {
+        flex-direction: column;
+        width: 90%;
+    }
+    .recipePageIngredientsContainer {
+        padding: 10px;
+    }
+    .recipePageInstructionsContainer {
+        margin: 20px 0 0 0;
+        padding: 10px;
+    }
+    .recipePageIngredientsContainer .title, .recipePageInstructionsContainer .title {
+        text-align: center;
+        margin: 0;
+    }
+    .recipePageIngredientsContainer .ingredients, .recipePageInstructionsContainer .instructions {
+        font-size: 1rem;
     }
 }
