@@ -98,7 +98,7 @@ header {
     outline: none;
 }
 
-/* HOMEPAGE */
+/* HOME PAGE */
 .homePageRecipes {
     display: flex;
     flex-wrap: wrap;
@@ -147,6 +147,90 @@ header {
     background-color: rgb(255, 255, 255);
 }
 
+/* RECIPE PAGE */
+.recipePage {
+    margin-top: 40px;
+}
+.recipePageTop {
+
+}
+.recipePageTopContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.recipePageIntroduction {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.recipePageTitle .category, .recipePageTitle .name, .recipePageTime .timeIcon {
+    color: rgb(182, 7, 65);
+}
+.recipePageQuantity {
+    margin-bottom: 20px;
+}
+.recipePageTime {
+    width: 60%;
+}
+.recipePageTime .preparationTime, .recipePageTime .restTime, .recipePageTime .cookingTime, .recipePageTime .totalTime {
+    display: flex;
+    justify-content: space-between;
+}
+.recipePageImage {
+    border-radius: 30px;
+    transition: transform 0.3s;
+}
+.recipePageImage:hover {
+    transform: rotate(-5deg);
+}
+.recipePageBottom {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px auto;
+}
+.recipePageBottomContainer {
+    display: flex;
+    border: 1px solid white;
+    border-radius: 30px;
+}
+.recipePageIngredientsContainer {
+    background-color: white;
+    border-radius: 30px 0 0 30px;
+    padding: 20px;
+}
+.recipePageInstructionsContainer {
+    border-radius: 0 30px 30px 0;
+    padding: 20px;
+}
+.recipePageIngredientsContainer .title {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.recipePageInstructionsContainer .title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.recipePageIngredientsContainer .ingredients {
+    margin: 0;
+    padding: 20px 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    background-color: white;
+}
+.recipePageInstructionsContainer .instructions {
+    margin: 0;
+    padding: 20px 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
 @media (max-width: 1280px) {
     /* HEADER */
     header {
@@ -186,7 +270,7 @@ header {
         width: 150px;
     }
 
-    /* HOMEPAGE */
+    /* HOME PAGE */
     .homePageRecipe {
         border-radius: 15px;
         width: 38%;
