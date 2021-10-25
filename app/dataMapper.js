@@ -1,6 +1,16 @@
 const client = require("./database");
 
 const dataMapper = {
+  getCategories: (callback) => {
+    const query = `SELECT DISTINCT "recipe"."category", case "category" when 'Entrée' then 1 when 'Plat' then 2 when 'Dessert' then 3 end FROM "recipe" ORDER BY case "category" when 'Entrée' then 1 when 'Plat' then 2 when 'Dessert' then 3 end`;
+
+    client.query(query, callback);
+  },
+  getCountries: (callback) => {
+    const query = `SELECT DISTINCT "recipe"."country" FROM "recipe" ORDER BY "recipe"."country" ASC`;
+
+    client.query(query, callback);
+  },
   getAllRecipes: (callback) => {
     const query = `SELECT "recipe"."id", "recipe"."pictureUrl", "recipe"."category", "recipe"."name" FROM "recipe" ORDER BY case "category" when 'Entrée' then 1 when 'Plat' then 2 when 'Dessert' then 3 end`;
 

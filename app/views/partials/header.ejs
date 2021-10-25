@@ -20,21 +20,23 @@
             <form action="/filter" method="GET" class="form">
                 <select onchange="this.form.submit()" class="recipeCategory" name="category">
                     <option value="Toutes-les-catégories" disabled hidden>Toutes les catégories</option>
+                    <option value="Toutes-les-catégories">Toutes les catégories</option>
                     <% for (const category of categories) { %>
-                        <% if (typeof selectedCategory == "undefined" || selectedCategory !== category.value) { %>
-                            <option value="<%= category.value %>"><%= category.label %></option>
-                        <% } if (typeof selectedCategory !== "undefined" && selectedCategory === category.value) { %>
-                                <option value="<%= category.value %>" selected><%= category.label %></option>
+                        <% if (typeof selectedCategory == "undefined" || selectedCategory !== category.category) { %>
+                            <option value="<%= category.category %>"><%= category.category %></option>
+                        <% } if (typeof selectedCategory !== "undefined" && selectedCategory === category.category) { %>
+                                <option value="<%= category.category %>" selected><%= category.category %></option>
                         <% } %>
                     <% } %>
                 </select>
                 <select onchange="this.form.submit()" class="recipeCountry" name="country">
                     <option value="Tous-les-types-de-cuisine" disabled hidden>Tous les types de cuisine</option>
+                    <option value="Tous-les-types-de-cuisine">Tous les types de cuisine</option>
                     <% for (const country of countries) { %>
-                        <% if (typeof selectedCountry == "undefined" || selectedCountry !== country.value) { %>
-                            <option value="<%= country.value %>"><%= country.label %></option>
-                        <% } if (typeof selectedCategory !== "undefined" && selectedCountry === country.value) { %>
-                                <option value="<%= country.value %>" selected><%= country.label %></option>
+                        <% if (typeof selectedCountry == "undefined" || selectedCountry !== country.country) { %>
+                            <option value="<%= country.country %>"><%= country.country %></option>
+                        <% } if (typeof selectedCategory !== "undefined" && selectedCountry === country.country) { %>
+                                <option value="<%= country.country %>" selected><%= country.country %></option>
                         <% } %>
                     <% } %>
                 </select>

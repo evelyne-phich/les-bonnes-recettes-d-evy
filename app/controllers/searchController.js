@@ -1,7 +1,5 @@
 const dataMapper = require("../dataMapper");
 
-const { categories, countries } = require("../data-categories-countries");
-
 const searchController = {
   getRecipesByName: (req, res) => {
     const category = req.query.category;
@@ -19,8 +17,6 @@ const searchController = {
         recipes,
         selectedCategory: category,
         selectedCountry: country,
-        categories,
-        countries,
         recipeName,
       });
     });

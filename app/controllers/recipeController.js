@@ -1,7 +1,5 @@
 const dataMapper = require("../dataMapper");
 
-const { categories, countries } = require("../data-categories-countries");
-
 const recipeController = {
   getRecipeById: (req, res) => {
     const id = req.params.id;
@@ -15,8 +13,6 @@ const recipeController = {
 
       res.render("recipePage", {
         recipe,
-        categories,
-        countries,
       });
     });
   },

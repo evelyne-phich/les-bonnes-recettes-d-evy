@@ -1,7 +1,5 @@
 const dataMapper = require("../dataMapper");
 
-const { categories, countries } = require("../data-categories-countries");
-
 const arrayIntersection = (array1, array2) => {
   return array1.filter((value1) => {
     let sameValue = false;
@@ -44,8 +42,6 @@ const filterController = {
           recipes: filteredRecipes,
           selectedCategory: category,
           selectedCountry: country,
-          categories,
-          countries,
         });
       });
     });
