@@ -1,0 +1,53 @@
+<%- include('partials/header') %>
+
+<main class="addRecipePage">
+    <form action="/recipe/:id" method="POST" class="addRecipePageForm">
+        <div class="category">
+            <input name="category" list="categories" placeholder="Catégorie">
+            <datalist id="categories">
+                <% for (const category of categories) { %>
+                    <option value="<%= category.category %>">
+                <% } %>
+            </datalist>
+        </div>
+        <div class="country">
+            <input name="country" list="countries" placeholder="Type de cuisine">
+            <datalist id="countries">
+                <% for (const country of countries) { %>
+                    <option value="<%= country.country %>">
+                <% } %>
+            </datalist>
+        </div>
+        <div class="name">
+            <input type="text" name="name" id="name" placeholder="Nom">
+        </div>
+        <div class="quantity">
+            <input type="text" name="quantity" id="quantity" placeholder="Quantité">
+        </div>
+        <div class="preparationTime">
+            <input type="text" name="preparationTime" id="preparationTime" placeholder="Temps de préparation">
+        </div>
+        <div class="restTime">
+            <input type="text" name="restTime" id="restTime" placeholder="Temps de repos">
+        </div>
+        <div class="cookingTime">
+            <input type="text" name="cookingTime" id="cookingTime" placeholder="Temps de cuisson">
+        </div>
+        <div class="totalTime">
+            <input type="text" name="totalTime" id="totalTime" placeholder="Temps total">
+        </div>
+        <div class="image">
+            <input type="text" name="image" id="image" placeholder="URL de l'image">
+        </div>
+        <div class="ingredients" id="ingredients">
+            <input type="text" name="ingredients[]" placeholder="Ingrédient">
+            <button type="button" onclick="addIngredient()" class="addIngredientButton">+</button>
+        </div>
+        <div class="instructions" id="instructions">
+            <input type="text" name="instructions[]" placeholder="Instruction">
+            <button type="button" onclick="addInstruction()" class="addInstructionButton">+</button>
+        </div>
+    </form>
+</main>
+
+<%- include('partials/footer') %>
