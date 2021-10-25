@@ -243,7 +243,24 @@ header {
     line-height: 2rem;
 }
 
-@media (max-width: 1280px) {
+/* ADMIN PAGE */
+.adminPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 289px);
+}
+.adminPage .addRecipe {
+    font-weight: bold;
+    background-color: rgb(182, 7, 65);
+    border-radius: 30px;
+    padding: 20px;
+}
+.adminPage .addRecipe a {
+    color: white;
+}
+
+@media (max-width: 1370px) {
     /* HEADER */
     header {
         flex-direction: column;
