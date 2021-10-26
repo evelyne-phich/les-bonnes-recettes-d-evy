@@ -23,16 +23,6 @@ const addIngredient = () => {
 };
 
 const deleteIngredient = () => {
-  const ingredientDiv = document.querySelector(".ingredient");
+  const ingredientDiv = document.getElementById("ingredient");
   ingredientDiv.parentNode.removeChild(ingredientDiv);
-};
-
-const addInstruction = () => {
-  const instructionInput = document.createElement("input");
-  input.setAttribute("type", "text");
-  instructionInput.setAttribute("name", "instructions[]");
-  instructionInput.id = "instruction";
-
-  const instructionsDiv = document.getElementById("instructions");
-  instructionsDiv.appendChild(instructionInput);
 };
