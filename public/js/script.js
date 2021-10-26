@@ -21,8 +21,3 @@ const addIngredient = () => {
     ingredientDiv.parentNode.removeChild(ingredientDiv);
   };
 };
-
-const deleteIngredient = () => {
-  const ingredientDiv = document.getElementById("ingredient");
-  ingredientDiv.parentNode.removeChild(ingredientDiv);
-};

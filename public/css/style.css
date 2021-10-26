@@ -290,7 +290,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 10px;
 }
 .addRecipePageForm .ingredients .addIngredientButton, .addRecipePageForm .ingredients .deleteIngredientButton {
     color: white;
@@ -303,19 +302,7 @@ header {
     cursor: pointer;
 }
 .addRecipePageForm .ingredients .addIngredientButton {
-    margin-bottom: 28px;
-}
-.addRecipePageForm .ingredientsTitle {
-    display: flex;
-    justify-content: space-between;
-    height: 82px;
-    width: 100%;
-}
-.addRecipePageForm .ingredients .ingredientsTitle label {
-    display: flex;
-    justify-content: center;
-    height: 46px;
-    width: 202px;
+    margin-bottom: 10px;
 }
 .addRecipePageForm .ingredients .ingredient {
     display: flex;
@@ -332,8 +319,10 @@ header {
     padding: 10px 0;
     font-family: 'Nunito Sans';
     font-size: 1rem;
+    width: 80%;
 }
-.addRecipePageForm textarea {
+.addRecipePageForm .instructions textarea {
+    font-size: 1rem;
     border-radius: 30px;
     padding: 20px;
 }
@@ -436,4 +425,31 @@ header {
     }
 
     /* ADD RECIPE PAGE */
+    .addRecipePageForm {
+        font-size: 1rem;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+    }
+    .addRecipePage .title {
+        font-size: 1.5rem;
+        margin-top: 0;
+        margin-bottom: 16px;
+    }
+    .addRecipePageForm .description, .addRecipePageForm .ingredients, .addRecipePageForm .instructions {
+        width: 280px;
+        margin-bottom: 10px;
+    }
+    .addRecipePageForm input {
+        padding: 0;
+    }
+    .addRecipePageForm .ingredients .addIngredientButton, .addRecipePageForm .ingredients .deleteIngredientButton {
+        font-size: 1.5rem;
+        height: 32px;
+        width: 32px;
+    }
+    .addRecipePageForm .instructions textarea {
+        height: 480px;
+        width: 260px;
+    }
 }
