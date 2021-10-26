@@ -52,17 +52,24 @@
             </div>
         </div>
         <div class="ingredients" id="ingredients">
-            <label for="ingredient">Ingrédients</label>
-            <button type="button" onclick="addIngredient()" class="addIngredientButton">+</button>
+            <div class="ingredientsTitle">
+                <label for="ingredient">Ingrédients</label>
+                <button type="button" onclick="addIngredient()" class="addIngredientButton">+</button>
+            </div>
             <div class="ingredient">
                 <input type="text" name="ingredients[]" id="ingredient">
                 <button type="button" onclick="deleteIngredient()" class="deleteIngredientButton">-</button>
             </div>
         </div>
         <div class="instructions" id="instructions">
-            <label for="instruction">Instructions</label>
-            <input type="text" name="instructions[]" id="instruction">
-            <button type="button" onclick="addInstruction()" class="addInstructionButton">+</button>
+            <div class="instructionsTitle">
+                <label for="instruction">Instructions</label>
+                <button type="button" onclick="addInstruction()" class="addInstructionButton">+</button>
+            </div>
+            <div class="instruction">
+                <input type="text" name="instructions[]" id="instruction">
+                <button type="button" onclick="deleteInstruction()" class="deleteInstructionButton">-</button>
+            </div>
         </div>
     </form>
 </main>

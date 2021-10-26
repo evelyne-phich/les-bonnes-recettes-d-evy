@@ -263,7 +263,6 @@ header {
 /* ADD RECIPE PAGE */
 
 .addRecipePage {
-    height: calc(100vh - 86px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -271,13 +270,20 @@ header {
 }
 .addRecipePage .title {
     color: rgb(182, 7, 65);
+    font-size: 2rem;
     margin-bottom: 40px;
 }
 .addRecipePageForm {
     display: flex;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
 }
 .addRecipePageForm .description, .addRecipePageForm .ingredients, .addRecipePageForm .instructions {
     margin: 0 40px;
+    min-width: 300px;
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 20px;
 }
 .addRecipePageForm .category, .addRecipePageForm .country, .addRecipePageForm .name, .addRecipePageForm .quantity, .addRecipePageForm .preparationTime, .addRecipePageForm .restTime, .addRecipePageForm .cookingTime, .addRecipePageForm .totalTime, .addRecipePageForm .image, .addRecipePageForm .ingredients, .addRecipePageForm .instructions {
     display: flex;
@@ -297,6 +303,23 @@ header {
 }
 .addRecipePageForm .ingredients .addIngredientButton {
     margin-bottom: 28px;
+}
+.addRecipePageForm .ingredientsTitle {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.addRecipePageForm .ingredients .ingredientsTitle label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 202px;
+}
+.addRecipePageForm .ingredients .ingredient {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
 }
 .addRecipePageForm label {
     margin-bottom: 10px;
@@ -407,7 +430,4 @@ header {
     }
 
     /* ADD RECIPE PAGE */
-    .addRecipePage {
-        height: calc(100vh - 289px);
-    }
 }
