@@ -1,19 +1,38 @@
 const addIngredient = () => {
-  const input = document.createElement("input");
-  input.setAttribute("type", "text");
-  input.setAttribute("name", "ingredients[]");
-  input.placeholder = "Ingrédient";
+  const ingredientInput = document.createElement("input");
+  ingredientInput.setAttribute("type", "text");
+  ingredientInput.setAttribute("name", "ingredients[]");
+  ingredientInput.id = "ingredient";
+
+  const deleteIngredientButton = document.createElement("button");
+  deleteIngredientButton.setAttribute("type", "button");
+  deleteIngredientButton.className = "deleteIngredientButton";
+  deleteIngredientButton.innerText = "-";
+
+  const ingredientDiv = document.createElement("div");
+  ingredientDiv.className = "ingredient";
+  ingredientDiv.appendChild(ingredientInput);
+  ingredientDiv.appendChild(deleteIngredientButton);
 
   const ingredientsDiv = document.getElementById("ingredients");
-  ingredientsDiv.appendChild(input);
+  ingredientsDiv.appendChild(ingredientDiv);
+
+  deleteIngredientButton.onclick = () => {
+    ingredientDiv.parentNode.removeChild(ingredientDiv);
+  };
+};
+
+const deleteIngredient = () => {
+  const ingredientDiv = document.querySelector(".ingredient");
+  ingredientDiv.parentNode.removeChild(ingredientDiv);
 };
 
 const addInstruction = () => {
-  const input = document.createElement("input");
+  const instructionInput = document.createElement("input");
   input.setAttribute("type", "text");
-  input.setAttribute("name", "instructions[]");
-  input.placeholder = "Instruction";
+  instructionInput.setAttribute("name", "instructions[]");
+  instructionInput.id = "instruction";
 
   const instructionsDiv = document.getElementById("instructions");
-  instructionsDiv.appendChild(input);
+  instructionsDiv.appendChild(instructionInput);
 };

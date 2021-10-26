@@ -248,7 +248,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 289px);
+    height: calc(100vh - 86px);
 }
 .adminPage .addRecipe {
     font-weight: bold;
@@ -258,6 +258,55 @@ header {
 }
 .adminPage .addRecipe a {
     color: white;
+}
+
+/* ADD RECIPE PAGE */
+
+.addRecipePage {
+    height: calc(100vh - 86px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+}
+.addRecipePage .title {
+    color: rgb(182, 7, 65);
+    margin-bottom: 40px;
+}
+.addRecipePageForm {
+    display: flex;
+}
+.addRecipePageForm .description, .addRecipePageForm .ingredients, .addRecipePageForm .instructions {
+    margin: 0 40px;
+}
+.addRecipePageForm .category, .addRecipePageForm .country, .addRecipePageForm .name, .addRecipePageForm .quantity, .addRecipePageForm .preparationTime, .addRecipePageForm .restTime, .addRecipePageForm .cookingTime, .addRecipePageForm .totalTime, .addRecipePageForm .image, .addRecipePageForm .ingredients, .addRecipePageForm .instructions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.addRecipePageForm .ingredients .addIngredientButton, .addRecipePageForm .ingredients .deleteIngredientButton {
+    color: white;
+    background-color: rgb(182, 7, 65);
+    font-size: 2rem;
+    font-weight: bold;
+    height: 46px;
+    width: 46px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.addRecipePageForm .ingredients .addIngredientButton {
+    margin-bottom: 28px;
+}
+.addRecipePageForm label {
+    margin-bottom: 10px;
+}
+.addRecipePageForm input {
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Nunito Sans';
+    font-size: 1rem;
 }
 
 @media (max-width: 1370px) {
@@ -350,5 +399,15 @@ header {
     }
     .recipePageIngredientsContainer .ingredients, .recipePageInstructionsContainer .instructions {
         font-size: 1rem;
+    }
+
+    /* ADMIN PAGE */
+    .adminPage {
+        height: calc(100vh - 289px);
+    }
+
+    /* ADD RECIPE PAGE */
+    .addRecipePage {
+        height: calc(100vh - 289px);
     }
 }

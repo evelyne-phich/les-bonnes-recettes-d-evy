@@ -1,50 +1,67 @@
 <%- include('partials/header') %>
 
 <main class="addRecipePage">
+    <h2 class="title">Ajouter une recette</h2>
     <form action="/recipe/:id" method="POST" class="addRecipePageForm">
-        <div class="category">
-            <input name="category" list="categories" placeholder="Catégorie">
-            <datalist id="categories">
-                <% for (const category of categories) { %>
-                    <option value="<%= category.category %>">
-                <% } %>
-            </datalist>
-        </div>
-        <div class="country">
-            <input name="country" list="countries" placeholder="Type de cuisine">
-            <datalist id="countries">
-                <% for (const country of countries) { %>
-                    <option value="<%= country.country %>">
-                <% } %>
-            </datalist>
-        </div>
-        <div class="name">
-            <input type="text" name="name" id="name" placeholder="Nom">
-        </div>
-        <div class="quantity">
-            <input type="text" name="quantity" id="quantity" placeholder="Quantité">
-        </div>
-        <div class="preparationTime">
-            <input type="text" name="preparationTime" id="preparationTime" placeholder="Temps de préparation">
-        </div>
-        <div class="restTime">
-            <input type="text" name="restTime" id="restTime" placeholder="Temps de repos">
-        </div>
-        <div class="cookingTime">
-            <input type="text" name="cookingTime" id="cookingTime" placeholder="Temps de cuisson">
-        </div>
-        <div class="totalTime">
-            <input type="text" name="totalTime" id="totalTime" placeholder="Temps total">
-        </div>
-        <div class="image">
-            <input type="text" name="image" id="image" placeholder="URL de l'image">
+        <div class="description">
+            <div class="category">
+                <label for="category">Catégorie</label>
+                <input name="category" id="category" list="categories">
+                <datalist id="categories">
+                    <% for (const category of categories) { %>
+                        <option value="<%= category.category %>">
+                    <% } %>
+                </datalist>
+            </div>
+            <div class="country">
+                <label for="country">Type de cuisine</label>
+                <input name="country" id="country" list="countries">
+                <datalist id="countries">
+                    <% for (const country of countries) { %>
+                        <option value="<%= country.country %>">
+                    <% } %>
+                </datalist>
+            </div>
+            <div class="name">
+                <label for="name">Nom</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="quantity">
+                <label for="quantity">Quantité</label>
+                <input type="text" name="quantity" id="quantity">
+            </div>
+            <div class="preparationTime">
+                <label for="preparationTime">Temps de préparation</label>
+                <input type="text" name="preparationTime" id="preparationTime">
+            </div>
+            <div class="restTime">
+                <label for="restTime">Temps de repos</label>
+                <input type="text" name="restTime" id="restTime">
+            </div>
+            <div class="cookingTime">
+                <label for="cookingTime">Temps de cuisson</label>
+                <input type="text" name="cookingTime" id="cookingTime">
+            </div>
+            <div class="totalTime">
+                <label for="totalTime">Temps total</label>
+                <input type="text" name="totalTime" id="totalTime">
+            </div>
+            <div class="image">
+                <label for="image">URL de l'image</label>
+                <input type="text" name="image" id="image">
+            </div>
         </div>
         <div class="ingredients" id="ingredients">
-            <input type="text" name="ingredients[]" placeholder="Ingrédient">
+            <label for="ingredient">Ingrédients</label>
             <button type="button" onclick="addIngredient()" class="addIngredientButton">+</button>
+            <div class="ingredient">
+                <input type="text" name="ingredients[]" id="ingredient">
+                <button type="button" onclick="deleteIngredient()" class="deleteIngredientButton">-</button>
+            </div>
         </div>
         <div class="instructions" id="instructions">
-            <input type="text" name="instructions[]" placeholder="Instruction">
+            <label for="instruction">Instructions</label>
+            <input type="text" name="instructions[]" id="instruction">
             <button type="button" onclick="addInstruction()" class="addInstructionButton">+</button>
         </div>
     </form>
