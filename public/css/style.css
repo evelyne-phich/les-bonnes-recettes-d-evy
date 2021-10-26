@@ -261,7 +261,6 @@ header {
 }
 
 /* ADD RECIPE PAGE */
-
 .addRecipePage {
     display: flex;
     flex-direction: column;
@@ -274,24 +273,30 @@ header {
     margin-bottom: 40px;
 }
 .addRecipePageForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.addRecipePageForm .container {
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     font-size: 1.2rem;
     margin-bottom: 40px;
-    width: 100%;
 }
-.addRecipePageForm .description, .addRecipePageForm .ingredients, .addRecipePageForm .instructions {
+.addRecipePageForm .container .description, .addRecipePageForm .container .ingredients, .addRecipePageForm .container .instructions {
     min-width: 300px;
     border: 2px solid white;
     border-radius: 30px;
     padding: 20px;
 }
-.addRecipePageForm .category, .addRecipePageForm .country, .addRecipePageForm .name, .addRecipePageForm .quantity, .addRecipePageForm .preparationTime, .addRecipePageForm .restTime, .addRecipePageForm .cookingTime, .addRecipePageForm .totalTime, .addRecipePageForm .image, .addRecipePageForm .ingredients, .addRecipePageForm .instructions {
+.addRecipePageForm .container .category, .addRecipePageForm .container .country, .addRecipePageForm .container .name, .addRecipePageForm .container .quantity, .addRecipePageForm .container .preparationTime, .addRecipePageForm .container .restTime, .addRecipePageForm .container .cookingTime, .addRecipePageForm .container .totalTime, .addRecipePageForm .container .image, .addRecipePageForm .container .ingredients, .addRecipePageForm .container .instructions {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.addRecipePageForm .ingredients .addIngredientButton, .addRecipePageForm .ingredients .deleteIngredientButton {
+.addRecipePageForm .container .ingredients .addIngredientButton, .addRecipePageForm .container .ingredients .deleteIngredientButton {
     color: white;
     background-color: rgb(182, 7, 65);
     font-size: 2rem;
@@ -301,19 +306,19 @@ header {
     border-radius: 50px;
     cursor: pointer;
 }
-.addRecipePageForm .ingredients .addIngredientButton {
+.addRecipePageForm .container .ingredients .addIngredientButton {
     margin-bottom: 10px;
 }
-.addRecipePageForm .ingredients .ingredient {
+.addRecipePageForm .container .ingredients .ingredient {
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin-bottom: 10px;
 }
-.addRecipePageForm label {
-    margin-bottom: 10px;
+.addRecipePageForm .container label {
+    margin: 10px auto;
 }
-.addRecipePageForm input {
+.addRecipePageForm .container input {
     border-radius: 30px;
     text-align: center;
     padding: 10px 0;
@@ -321,10 +326,22 @@ header {
     font-size: 1rem;
     width: 80%;
 }
-.addRecipePageForm .instructions textarea {
+.addRecipePageForm .container .instructions textarea {
     font-size: 1rem;
     border-radius: 30px;
     padding: 20px;
+}
+.addRecipePageForm .submitButton {
+    color: white;
+    background-color: rgb(182, 7, 65);
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 40px;
+    border-style: none;
+    width: 80%;
 }
 
 @media (max-width: 1370px) {
@@ -425,7 +442,7 @@ header {
     }
 
     /* ADD RECIPE PAGE */
-    .addRecipePageForm {
+    .addRecipePageForm .container {
         font-size: 1rem;
         flex-direction: column;
         align-items: center;
@@ -436,20 +453,18 @@ header {
         margin-top: 0;
         margin-bottom: 16px;
     }
-    .addRecipePageForm .description, .addRecipePageForm .ingredients, .addRecipePageForm .instructions {
+    .addRecipePageForm .container .description, .addRecipePageForm .container .ingredients, .addRecipePageForm .container .instructions {
         width: 280px;
         margin-bottom: 10px;
     }
-    .addRecipePageForm input {
-        padding: 0;
-    }
-    .addRecipePageForm .ingredients .addIngredientButton, .addRecipePageForm .ingredients .deleteIngredientButton {
+    .addRecipePageForm .container .ingredients .addIngredientButton, .addRecipePageForm .container .ingredients .deleteIngredientButton {
         font-size: 1.5rem;
-        height: 32px;
-        width: 32px;
     }
-    .addRecipePageForm .instructions textarea {
+    .addRecipePageForm .container .instructions textarea {
         height: 480px;
         width: 260px;
+    }
+    .addRecipePageForm .submitButton {
+        margin-bottom: 10px;
     }
 }
