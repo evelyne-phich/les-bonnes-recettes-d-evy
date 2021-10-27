@@ -328,6 +328,7 @@ header {
 }
 .addRecipePageForm .container .instructions textarea {
     font-size: 1rem;
+    font-family: 'Nunito Sans';
     border-radius: 30px;
     padding: 20px;
 }

@@ -14,4 +14,6 @@ router.get("/recipe/:id", recipeController.getRecipeById);
 router.get("/admin", adminController.getAdminPage);
 router.get("/admin/addRecipe", adminController.getAddRecipePage);
 
+router.post("/admin/addRecipe/result", adminController.postAddRecipe);
+
 module.exports = router;

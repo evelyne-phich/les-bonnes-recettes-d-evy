@@ -16,6 +16,8 @@ app.set("views", "app/views");
 
 app.use(express.static("public"));
 
+app.use(express.urlencoded({ extended: true }));
+
 app.use((req, res, next) => {
   dataMapper.getCategories((err, result) => {
     if (err) {

@@ -2,7 +2,7 @@
 
 <main class="addRecipePage">
     <h2 class="title">Ajouter une recette</h2>
-    <form action="/recipe/:id" method="POST" class="addRecipePageForm">
+    <form action="/admin/addRecipe/result" method="POST" class="addRecipePageForm">
         <div class="container">
             <div class="description">
                 <div class="category">
@@ -58,7 +58,7 @@
             </div>
             <div class="instructions" id="instructions">
                 <label for="instruction">Instructions</label>
-                <textarea name="instructions[]" id="instruction" rows="40" cols="45"></textarea>
+                <textarea name="instructions" id="instructionsList" rows="40" cols="45"></textarea>
             </div>
         </div>
         <input type="submit" value="Valider" class="submitButton">
