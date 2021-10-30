@@ -1,3 +1,5 @@
+const dataMapper = require("../dataMapper");
+
 const adminController = {
   getAdminPage: (req, res) => {
     res.render("adminPage");
@@ -5,7 +7,7 @@ const adminController = {
   getAddRecipePage: (req, res) => {
     res.render("addRecipePage");
   },
-  postAddRecipe: (req, res) => {
+  postRecipe: (req, res) => {
     const {
       category,
       country,
@@ -20,20 +22,26 @@ const adminController = {
       instructions,
     } = req.body;
 
-    res.render("recipePage", {
-      recipe: {
-        category,
-        country,
-        name,
-        quantity,
-        preparationTime,
-        restTime,
-        cookingTime,
-        totalTime,
-        image,
-        ingredients,
-        instructions: instructions.split("\r\n\r\n"),
-      },
+    const recipe = {
+      category,
+      country,
+      name,
+      quantity,
+      preparationTime,
+      restTime,
+      cookingTime,
+      totalTime,
+      image,
+      ingredients,
+      instructions: instructions.split("\r\n\r\n"),
+    };
+
+    dataMapper.postRecipe(recipe, (err, result) => {
+      if (err) {
+        return console.error(err);
+      }
+      const id = result.rows[0].id;
+      res.redirect(`/recipe/${id}`);
     });
   },
 };

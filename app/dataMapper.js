@@ -1,5 +1,26 @@
 const client = require("./database");
 
+const convertJSArrayToPSQLArray = (strings) => {
+  let psqlArray = "'{";
+
+  strings.forEach((a, index) => {
+    const escapedA = a
+      .replaceAll("'", "''")
+      .replaceAll(",", "\\,")
+      .replaceAll('"', '\\"');
+
+    if (index === strings.length - 1) {
+      psqlArray = psqlArray + escapedA;
+    } else {
+      psqlArray = psqlArray + escapedA + ", ";
+    }
+  });
+
+  psqlArray = psqlArray + "}'";
+
+  return psqlArray;
+};
+
 const dataMapper = {
   getCategories: (callback) => {
     const query = `SELECT DISTINCT "recipe"."category", case "category" when 'Entrée' then 1 when 'Plat' then 2 when 'Dessert' then 3 end FROM "recipe" ORDER BY case "category" when 'Entrée' then 1 when 'Plat' then 2 when 'Dessert' then 3 end`;
@@ -47,6 +68,39 @@ const dataMapper = {
     const query = `SELECT * FROM "recipe" WHERE "recipe"."id" = $1`;
 
     client.query(query, [id], callback);
+  },
+  postRecipe: (recipe, callback) => {
+    const query = `INSERT INTO "recipe"
+    (
+    "category",
+    "name",
+    "pictureUrl",
+    "country",
+    "preparationTime",
+    "restTime",
+    "cookingTime",
+    "totalTime",
+    "quantity",
+    "ingredients",
+    "instructions"
+    )
+    VALUES
+    (
+    '${recipe.category}',
+    '${recipe.country}',
+    '${recipe.name}',
+    '${recipe.quantity}',
+    '${recipe.preparationTime}',
+    '${recipe.restTime}',
+    '${recipe.cookingTime}',
+    '${recipe.totalTime}',
+    '${recipe.image}',
+    ${convertJSArrayToPSQLArray(recipe.ingredients)},
+    ${convertJSArrayToPSQLArray(recipe.instructions)}
+    )
+    RETURNING "id"`;
+
+    client.query(query, [], callback);
   },
 };
 
