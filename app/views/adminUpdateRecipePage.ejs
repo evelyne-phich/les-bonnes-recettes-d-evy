@@ -54,7 +54,7 @@
                 <% for (const ingredient of recipe.ingredients) { %>
                     <div class="ingredient">
                         <input type="text" name="ingredient" id="ingredient" value="<%= ingredient %>">
-                        <button type="button" onclick="deleteIngredient()" class="deleteIngredientButton">-</button>
+                        <button type="button" onclick="deleteIngredient(this)" class="deleteIngredientButton">-</button>
                     </div>
                 <% } %>
             </div>
