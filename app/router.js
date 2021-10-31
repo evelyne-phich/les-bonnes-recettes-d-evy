@@ -12,7 +12,8 @@ router.get("/filter", filterController.getRecipesByCategoryAndCountry);
 router.get("/search", searchController.getRecipesByName);
 router.get("/recipe/:id", recipeController.getRecipeById);
 router.get("/admin", adminController.getAdminPage);
-router.get("/admin/addRecipe", adminController.getAddRecipePage);
+router.get("/admin/addRecipe", adminController.getAdminAddRecipePage);
+router.get("/admin/updateRecipe/:id", adminController.getUpdateRecipePage);
 
 router.post("/recipe", adminController.postRecipe);
 

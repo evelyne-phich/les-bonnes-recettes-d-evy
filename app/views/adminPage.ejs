@@ -1,7 +1,20 @@
 <%- include('partials/header') %>
 
-<main class="adminPage">
+<main class="homePageRecipes">
     <div class="addRecipe"><a href="/admin/addRecipe">Ajouter une recette</a></div>
+    <% for (const recipe of recipes) { %>
+        <div class="homePageRecipe">
+            <a href="/recipe/<%= recipe.id %>">
+                <img src="<%= recipe.pictureUrl %>">
+                <h2 class="homePageRecipeCategory"><%= recipe.category %></h2>
+                <h3 class="homePageRecipeName"><%= recipe.name %></h3>
+            </a>
+            <a class="updateButton" href="/admin/updateRecipe/<%= recipe.id %>"><i class="fas fa-edit"></i></a>
+        </div>
+    <% } %>
 </main>
+<a href="#arrowUp">
+    <img class="arrowUp" src="/images/arrow_upward.svg">
+</a>
 
 <%- include('partials/footer') %>

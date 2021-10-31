@@ -244,59 +244,67 @@ header {
 }
 
 /* ADMIN PAGE */
-.adminPage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 86px);
-}
-.adminPage .addRecipe {
+.addRecipe {
     font-weight: bold;
     background-color: rgb(182, 7, 65);
     border-radius: 30px;
     padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-.adminPage .addRecipe a {
+.addRecipe a {
     color: white;
+}
+.addRecipe:hover {
+    box-shadow: rgb(255 255 255 / 12%) 0px 2px 4px 0px, rgb(249 249 249 / 32%) 0px 2px 16px 0px;
+    transform: scale(1.1);
+}
+.updateButton {
+    color: rgb(182, 7, 65);
+    font-size: 1.5rem;
+    opacity: 0.8;
+    cursor: pointer;
+}
+.updateButton:hover {
+    opacity: 1;
 }
 
 /* ADD RECIPE PAGE */
-.addRecipePage {
+.adminRecipePage {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-weight: bold;
 }
-.addRecipePage .title {
+.adminRecipePage .title {
     color: rgb(182, 7, 65);
     font-size: 2rem;
     margin-bottom: 40px;
 }
-.addRecipePageForm {
+.adminRecipePageForm {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.addRecipePageForm .container {
+.adminRecipePageForm .container {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     font-size: 1.2rem;
     margin-bottom: 40px;
 }
-.addRecipePageForm .container .description, .addRecipePageForm .container .ingredients, .addRecipePageForm .container .instructions {
+.adminRecipePageForm .container .description, .adminRecipePageForm .container .ingredients, .adminRecipePageForm .container .instructions {
     min-width: 300px;
     border: 2px solid white;
     border-radius: 30px;
     padding: 20px;
 }
-.addRecipePageForm .container .category, .addRecipePageForm .container .country, .addRecipePageForm .container .name, .addRecipePageForm .container .quantity, .addRecipePageForm .container .preparationTime, .addRecipePageForm .container .restTime, .addRecipePageForm .container .cookingTime, .addRecipePageForm .container .totalTime, .addRecipePageForm .container .image, .addRecipePageForm .container .ingredients, .addRecipePageForm .container .instructions {
+.adminRecipePageForm .container .category, .adminRecipePageForm .container .country, .adminRecipePageForm .container .name, .adminRecipePageForm .container .quantity, .adminRecipePageForm .container .preparationTime, .adminRecipePageForm .container .restTime, .adminRecipePageForm .container .cookingTime, .adminRecipePageForm .container .totalTime, .adminRecipePageForm .container .image, .adminRecipePageForm .container .ingredients, .adminRecipePageForm .container .instructions {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.addRecipePageForm .container .ingredients .addIngredientButton, .addRecipePageForm .container .ingredients .deleteIngredientButton {
+.adminRecipePageForm .container .ingredients .addIngredientButton, .adminRecipePageForm .container .ingredients .deleteIngredientButton {
     color: white;
     background-color: rgb(182, 7, 65);
     font-size: 2rem;
@@ -306,19 +314,19 @@ header {
     border-radius: 50px;
     cursor: pointer;
 }
-.addRecipePageForm .container .ingredients .addIngredientButton {
+.adminRecipePageForm .container .ingredients .addIngredientButton {
     margin-bottom: 10px;
 }
-.addRecipePageForm .container .ingredients .ingredient {
+.adminRecipePageForm .container .ingredients .ingredient {
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin-bottom: 10px;
 }
-.addRecipePageForm .container label {
+.adminRecipePageForm .container label {
     margin: 10px auto;
 }
-.addRecipePageForm .container input {
+.adminRecipePageForm .container input {
     border-radius: 30px;
     text-align: center;
     padding: 10px 0;
@@ -326,13 +334,13 @@ header {
     font-size: 1rem;
     width: 80%;
 }
-.addRecipePageForm .container .instructions textarea {
+.adminRecipePageForm .container .instructions textarea {
     font-size: 1rem;
     font-family: 'Nunito Sans';
     border-radius: 30px;
     padding: 20px;
 }
-.addRecipePageForm .submitButton {
+.adminRecipePageForm .submitButton {
     color: white;
     background-color: rgb(182, 7, 65);
     font-size: 1.5rem;
@@ -443,29 +451,29 @@ header {
     }
 
     /* ADD RECIPE PAGE */
-    .addRecipePageForm .container {
+    .adminRecipePageForm .container {
         font-size: 1rem;
         flex-direction: column;
         align-items: center;
         margin-bottom: 0;
     }
-    .addRecipePage .title {
+    .adminRecipePage .title {
         font-size: 1.5rem;
         margin-top: 0;
         margin-bottom: 16px;
     }
-    .addRecipePageForm .container .description, .addRecipePageForm .container .ingredients, .addRecipePageForm .container .instructions {
+    .adminRecipePageForm .container .description, .adminRecipePageForm .container .ingredients, .adminRecipePageForm .container .instructions {
         width: 280px;
         margin-bottom: 10px;
     }
-    .addRecipePageForm .container .ingredients .addIngredientButton, .addRecipePageForm .container .ingredients .deleteIngredientButton {
+    .adminRecipePageForm .container .ingredients .addIngredientButton, .adminRecipePageForm .container .ingredients .deleteIngredientButton {
         font-size: 1.5rem;
     }
-    .addRecipePageForm .container .instructions textarea {
+    .adminRecipePageForm .container .instructions textarea {
         height: 480px;
         width: 260px;
     }
-    .addRecipePageForm .submitButton {
+    .adminRecipePageForm .submitButton {
         margin-bottom: 10px;
     }
 }

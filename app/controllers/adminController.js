@@ -2,10 +2,25 @@ const dataMapper = require("../dataMapper");
 
 const adminController = {
   getAdminPage: (req, res) => {
-    res.render("adminPage");
+    const category = req.query.category;
+    const country = req.query.country;
+
+    dataMapper.getAllRecipes((err, result) => {
+      if (err) {
+        return console.error(err);
+      }
+
+      const recipes = result.rows;
+
+      res.render("adminPage", {
+        recipes,
+        selectedCategory: category,
+        selectedCountry: country,
+      });
+    });
   },
-  getAddRecipePage: (req, res) => {
-    res.render("addRecipePage");
+  getAdminAddRecipePage: (req, res) => {
+    res.render("adminAddRecipePage");
   },
   postRecipe: (req, res) => {
     const {
@@ -42,6 +57,21 @@ const adminController = {
       }
       const id = result.rows[0].id;
       res.redirect(`/recipe/${id}`);
+    });
+  },
+  getUpdateRecipePage: (req, res) => {
+    const id = req.params.id;
+
+    dataMapper.getRecipeById(id, (err, result) => {
+      if (err) {
+        return console.error(err);
+      }
+
+      const recipe = result.rows[0];
+
+      res.render("adminUpdateRecipePage", {
+        recipe,
+      });
     });
   },
 };
