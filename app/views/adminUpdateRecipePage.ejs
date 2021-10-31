@@ -7,17 +7,11 @@
             <div class="description">
                 <div class="category">
                     <label for="category">Catégorie</label>
-                    <input name="category" id="category" list="categories">
-                    <datalist id="categories">
-                            <option value="<%= recipe.category %>">
-                    </datalist>
+                    <input name="category" id="category" list="categories" value="<%= recipe.category %>">
                 </div>
                 <div class="country">
                     <label for="country">Type de cuisine</label>
-                    <input name="country" id="country" list="countries">
-                    <datalist id="countries">
-                            <option value="<%= recipe.country %>">
-                    </datalist>
+                    <input name="country" id="country" list="countries" value="<%= recipe.country %>">
                 </div>
                 <div class="name">
                     <label for="name">Nom</label>
@@ -60,7 +54,7 @@
             </div>
             <div class="instructions" id="instructions">
                 <label for="instruction">Instructions</label>
-                <textarea name="instructions" id="instructionsList" rows="40" cols="45"></textarea>
+                <textarea name="instructions" id="instructionsList" rows="40" cols="45"><%= recipe.instructions.join("\r\n\r\n") %></textarea>
             </div>
         </div>
         <input type="submit" value="Valider" class="submitButton">

@@ -22,6 +22,9 @@ li::marker {
     color: rgb(182, 7, 65);
     font-weight: bold;
 }
+input {
+    border-style: none;
+}
 
 /* HEADER */
 h1 {
@@ -124,7 +127,7 @@ header {
 }
 .homePageRecipe:hover {
     box-shadow: rgb(255 255 255 / 12%) 0px 2px 4px 0px, rgb(249 249 249 / 32%) 0px 2px 16px 0px;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 .homePageRecipe img {
     width: 100%;
@@ -268,7 +271,7 @@ header {
     opacity: 1;
 }
 
-/* ADD RECIPE PAGE */
+/* ADMIN ADD RECIPE PAGE & UPDATE RECIPE PAGE */
 .adminRecipePage {
     display: flex;
     flex-direction: column;
@@ -316,6 +319,17 @@ header {
 }
 .adminRecipePageForm .container .ingredients .addIngredientButton {
     margin-bottom: 10px;
+    opacity: 0.8;
+}
+.adminRecipePageForm .container .ingredients .addIngredientButton:hover {
+    opacity: 1;
+}
+.adminRecipePageForm .container .ingredients .deleteIngredientButton {
+    margin-left: 10px;
+    opacity: 0.8;
+}
+.adminRecipePageForm .container .ingredients .deleteIngredientButton:hover {
+    opacity: 1;
 }
 .adminRecipePageForm .container .ingredients .ingredient {
     display: flex;
@@ -329,7 +343,7 @@ header {
 .adminRecipePageForm .container input {
     border-radius: 30px;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px 10px;
     font-family: 'Nunito Sans';
     font-size: 1rem;
     width: 80%;
@@ -351,6 +365,9 @@ header {
     margin-bottom: 40px;
     border-style: none;
     width: 80%;
+}
+.addRecipe {
+    margin: 10px;
 }
 
 @media (max-width: 1370px) {
@@ -468,6 +485,7 @@ header {
     }
     .adminRecipePageForm .container .ingredients .addIngredientButton, .adminRecipePageForm .container .ingredients .deleteIngredientButton {
         font-size: 1.5rem;
+        opacity: 1;
     }
     .adminRecipePageForm .container .instructions textarea {
         height: 480px;
