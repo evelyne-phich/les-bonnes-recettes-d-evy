@@ -105,6 +105,9 @@ const adminController = {
       instructions: instructions.split("\r\n\r\n"),
     };
 
+    console.log({ ingredients: recipe.ingredients });
+    console.log({ instructions: recipe.instructions });
+
     dataMapper.putRecipe(recipe, (err) => {
       if (err) {
         return console.error(err);
