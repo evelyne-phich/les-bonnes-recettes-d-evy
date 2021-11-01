@@ -16,5 +16,6 @@ router.get("/admin/addRecipe", adminController.getAdminAddRecipePage);
 router.get("/admin/updateRecipe/:id", adminController.getUpdateRecipePage);
 
 router.post("/recipe", adminController.postRecipe);
+router.post("/update/recipe", adminController.putRecipe);
 
 module.exports = router;

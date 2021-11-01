@@ -74,6 +74,45 @@ const adminController = {
       });
     });
   },
+  putRecipe: (req, res) => {
+    const {
+      id,
+      category,
+      country,
+      name,
+      quantity,
+      preparationTime,
+      restTime,
+      cookingTime,
+      totalTime,
+      image,
+      ingredients,
+      instructions,
+    } = req.body;
+
+    const recipe = {
+      id,
+      category,
+      country,
+      name,
+      quantity,
+      preparationTime,
+      restTime,
+      cookingTime,
+      totalTime,
+      image,
+      ingredients,
+      instructions: instructions.split("\r\n\r\n"),
+    };
+
+    dataMapper.putRecipe(recipe, (err) => {
+      if (err) {
+        return console.error(err);
+      }
+
+      res.redirect(`/recipe/${id}`);
+    });
+  },
 };
 
 module.exports = adminController;

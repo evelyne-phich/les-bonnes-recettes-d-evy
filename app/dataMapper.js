@@ -102,25 +102,27 @@ const dataMapper = {
 
     client.query(query, [], callback);
   },
-  // putRecipe: (recipe, callback) => {
-  //   const query = `UPDATE "recipe"
-  //   SET
-  //   "category" = '${recipe.category}',
-  //   "country" = '${recipe.country}',
-  //   "name" = '${recipe.name}',
-  //   "quantity" = '${recipe.quantity}',
-  //   "preparationTime" = '${recipe.preparationTime}',
-  //   "restTime" = '${recipe.restTime}',
-  //   "cookingTime" = '${recipe.cookingTime}',
-  //   "totalTime" = '${recipe.totalTime}',
-  //   "pictureUrl" = '${recipe.image}',
-  //   "ingredients" = ${convertJSArrayToPSQLArray(recipe.ingredients)},
-  //   "instructions" = ${convertJSArrayToPSQLArray(recipe.instructions)},
-  //   WHERE "id" = ${recipe.id}
-  //   `;
+  putRecipe: (recipe, callback) => {
+    const query = `UPDATE "recipe"
+    SET
+    "category" = '${recipe.category}',
+    "country" = '${recipe.country}',
+    "name" = '${recipe.name}',
+    "quantity" = '${recipe.quantity}',
+    "preparationTime" = '${recipe.preparationTime}',
+    "restTime" = '${recipe.restTime}',
+    "cookingTime" = '${recipe.cookingTime}',
+    "totalTime" = '${recipe.totalTime}',
+    "pictureUrl" = '${recipe.image}',
+    "ingredients" = ${convertJSArrayToPSQLArray(recipe.ingredients)},
+    "instructions" = ${convertJSArrayToPSQLArray(recipe.instructions)}
+    WHERE "id" = ${recipe.id}
+    `;
 
-  //   client.query(query, [], callback);
-  // },
+    client.query(query, [], (err) => {
+      callback(err);
+    });
+  },
 };
 
 module.exports = dataMapper;

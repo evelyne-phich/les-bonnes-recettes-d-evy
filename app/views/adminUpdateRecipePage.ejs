@@ -2,7 +2,8 @@
 
 <main class="adminRecipePage">
     <h2 class="title">Modifier une recette</h2>
-    <form action="/recipe" method="PUT" class="adminRecipePageForm">
+    <form action="/update/recipe" method="POST" class="adminRecipePageForm">
+        <input type="hidden" name="id" value="<%= recipe.id %>">
         <div class="container">
             <div class="description">
                 <div class="category">
@@ -47,7 +48,7 @@
                 <button type="button" onclick="addIngredient()" class="addIngredientButton">+</button>
                 <% for (const ingredient of recipe.ingredients) { %>
                     <div class="ingredient">
-                        <input type="text" name="ingredient" id="ingredient" value="<%= ingredient %>">
+                        <input type="text" name="ingredients" id="ingredient" value="<%= ingredient %>">
                         <button type="button" onclick="deleteIngredient(this)" class="deleteIngredientButton">-</button>
                     </div>
                 <% } %>
