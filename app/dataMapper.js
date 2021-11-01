@@ -3,7 +3,10 @@ const client = require("./database");
 const convertJSArrayToPSQLArray = (strings) => {
   let psqlArray = "'{";
 
+  console.log({ strings });
+
   strings.forEach((a, index) => {
+    console.log({ a, index });
     const escapedA = a
       .replaceAll("'", "''")
       .replaceAll(",", "\\,")
