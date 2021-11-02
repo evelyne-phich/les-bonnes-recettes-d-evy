@@ -9,7 +9,10 @@
                 <h2 class="homePageRecipeCategory"><%= recipe.category %></h2>
                 <h3 class="homePageRecipeName"><%= recipe.name %></h3>
             </a>
-            <a class="updateButton" href="/admin/updateRecipe/<%= recipe.id %>"><i class="fas fa-edit"></i></a>
+            <div class="optionsButton">
+                <a class="updateButton" href="/admin/updateRecipe/<%= recipe.id %>"><i class="fas fa-edit"></i></a>
+                <a class="deleteButton" href="/admin/deleteRecipe/<%= recipe.id %>"><i class="fas fa-trash"></i></a>
+            </div>
         </div>
     <% } %>
 </main>

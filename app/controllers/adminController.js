@@ -113,6 +113,17 @@ const adminController = {
       res.redirect(`/recipe/${id}`);
     });
   },
+  deleteRecipe: (req, res) => {
+    const id = req.params.id;
+
+    dataMapper.deleteRecipe(id, (err) => {
+      if (err) {
+        return console.error(err);
+      }
+
+      res.redirect("/admin");
+    });
+  },
 };
 
 module.exports = adminController;

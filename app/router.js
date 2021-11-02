@@ -14,6 +14,7 @@ router.get("/recipe/:id", recipeController.getRecipeById);
 router.get("/admin", adminController.getAdminPage);
 router.get("/admin/addRecipe", adminController.getAdminAddRecipePage);
 router.get("/admin/updateRecipe/:id", adminController.getUpdateRecipePage);
+router.get("/admin/deleteRecipe/:id", adminController.deleteRecipe);
 
 router.post("/recipe", adminController.postRecipe);
 router.post("/update/recipe", adminController.putRecipe);

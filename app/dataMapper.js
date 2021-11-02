@@ -123,6 +123,13 @@ const dataMapper = {
       callback(err);
     });
   },
+  deleteRecipe: (id, callback) => {
+    const query = `DELETE FROM "recipe" WHERE "recipe"."id" = $1`;
+
+    client.query(query, [id], (err) => {
+      callback(err);
+    });
+  },
 };
 
 module.exports = dataMapper;

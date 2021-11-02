@@ -261,14 +261,19 @@ header {
     box-shadow: rgb(255 255 255 / 12%) 0px 2px 4px 0px, rgb(249 249 249 / 32%) 0px 2px 16px 0px;
     transform: scale(1.1);
 }
-.updateButton {
+.updateButton, .deleteButton {
     color: rgb(182, 7, 65);
     font-size: 1.5rem;
     opacity: 0.8;
     cursor: pointer;
 }
-.updateButton:hover {
+.updateButton:hover, .deleteButton:hover {
     opacity: 1;
+}
+.optionsButton {
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
 }
 
 /* ADMIN ADD RECIPE PAGE & UPDATE RECIPE PAGE */
