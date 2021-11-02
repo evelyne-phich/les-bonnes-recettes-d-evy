@@ -97,8 +97,7 @@ const dataMapper = {
     '${recipe.image}',
     ${convertJSArrayToPSQLArray(recipe.ingredients)},
     ${convertJSArrayToPSQLArray(recipe.instructions)}
-    )
-    RETURNING "id"`;
+    )`;
 
     client.query(query, [], callback);
   },
@@ -119,16 +118,12 @@ const dataMapper = {
     WHERE "id" = ${recipe.id}
     `;
 
-    client.query(query, [], (err) => {
-      callback(err);
-    });
+    client.query(query, [], callback);
   },
   deleteRecipe: (id, callback) => {
     const query = `DELETE FROM "recipe" WHERE "recipe"."id" = $1`;
 
-    client.query(query, [id], (err) => {
-      callback(err);
-    });
+    client.query(query, [id], callback);
   },
   getLoginUsername: (username, callback) => {
     const query = `SELECT * FROM "admin" WHERE "admin"."username" = $1`;

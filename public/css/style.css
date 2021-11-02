@@ -368,7 +368,6 @@ header {
     cursor: pointer;
     padding: 10px;
     margin-bottom: 40px;
-    border-style: none;
     width: 80%;
 }
 .addRecipe {
@@ -413,6 +412,15 @@ header {
     padding: 10px 10px;
     font-family: 'Nunito Sans';
     font-size: 1rem;
+}
+.adminLoginForm .submitButton {
+    color: white;
+    background-color: rgb(182, 7, 65);
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
 }
 
 @media (max-width: 1370px) {
@@ -543,5 +551,11 @@ header {
     /* ADMIN LOGIN PAGE */
     .adminLoginPage {
         height: calc(100vh - 289px);
+    }
+    .adminLoginForm {
+        padding: 40px;
+    }
+    .adminLoginForm .title {
+        font-size: 1.5rem;
     }
 }

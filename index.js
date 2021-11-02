@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   session({
-    secret: "secret",
+    secret: "secret-les-bonnes-recettes-d-evy",
     resave: true,
     saveUninitialized: true,
   })
@@ -45,6 +45,18 @@ app.use((req, res, next) => {
     res.locals.countries = result.rows;
     next();
   });
+});
+
+app.use((req, res, next) => {
+  if (req.url.startsWith("/admin") && req.url !== "/admin/login") {
+    if (req.session.user === undefined) {
+      res.send("Vous n'êtes pas autorisé à accéder à cette page.");
+      return;
+    }
+    next();
+  } else {
+    next();
+  }
 });
 
 app.use(router);

@@ -17,7 +17,8 @@ router.get("/admin/updateRecipe/:id", adminController.getUpdateRecipePage);
 router.get("/admin/deleteRecipe/:id", adminController.deleteRecipe);
 router.get("/admin/login", adminController.getLoginPage);
 
-router.post("/recipe", adminController.postRecipe);
-router.post("/update/recipe", adminController.putRecipe);
+router.post("/admin/recipe", adminController.postRecipe);
+router.post("/admin/update/recipe", adminController.putRecipe);
+router.post("/admin/login", adminController.postLoginPage);
 
 module.exports = router;

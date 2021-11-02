@@ -1,8 +1,5 @@
 const bcrypt = require("bcrypt");
 
-const salt = bcrypt.genSaltSync(10);
-console.log(bcrypt.hashSync("XIIIthebest", salt));
-
 const dataMapper = require("../dataMapper");
 
 const adminController = {
@@ -56,12 +53,11 @@ const adminController = {
       instructions: instructions.split("\r\n\r\n"),
     };
 
-    dataMapper.postRecipe(recipe, (err, result) => {
+    dataMapper.postRecipe(recipe, (err) => {
       if (err) {
         return console.error(err);
       }
-      const id = result.rows[0].id;
-      res.redirect(`/recipe/${id}`);
+      res.redirect("/admin");
     });
   },
   getUpdateRecipePage: (req, res) => {
@@ -115,7 +111,7 @@ const adminController = {
         return console.error(err);
       }
 
-      res.redirect(`/recipe/${id}`);
+      res.redirect("/admin");
     });
   },
   deleteRecipe: (req, res) => {
@@ -148,7 +144,7 @@ const adminController = {
       }
 
       if (bcrypt.compareSync(password, foundUser.password)) {
-        request.session.user = user;
+        req.session.user = foundUser;
 
         res.redirect("/admin");
       }
