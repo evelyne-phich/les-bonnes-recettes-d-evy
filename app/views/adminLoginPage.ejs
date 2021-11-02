@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+
+<main class="adminLoginPage">
+    <form action="/admin/login" method="POST" class="adminLoginForm">
+        <h2 class="title">Connexion</h2>
+        <div class="username">
+            <label for="username">Identifiant</label>
+            <input type="text" name="username" id="username">
+        </div>
+        <div class="password">
+            <label for="password">Mot de passe</label>
+            <input type="password" name="password" id="password">
+        </div>
+    </form>
+</main>
+
+<%- include('partials/footer') %>

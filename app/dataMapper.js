@@ -130,6 +130,11 @@ const dataMapper = {
       callback(err);
     });
   },
+  getLoginUsername: (username, callback) => {
+    const query = `SELECT * FROM "admin" WHERE "admin"."username" = $1`;
+
+    client.query(query, [username], callback);
+  },
 };
 
 module.exports = dataMapper;

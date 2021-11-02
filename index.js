@@ -3,6 +3,8 @@ dotenv.config();
 
 const express = require("express");
 
+const session = require("express-session");
+
 const dataMapper = require("./app/dataMapper");
 
 const router = require("./app/router");
@@ -16,6 +18,14 @@ app.set("views", "app/views");
 
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
+
+app.use(
+  session({
+    secret: "secret",
+    resave: true,
+    saveUninitialized: true,
+  })
+);
 
 app.use((req, res, next) => {
   dataMapper.getCategories((err, result) => {

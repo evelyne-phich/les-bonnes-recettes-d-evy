@@ -375,6 +375,46 @@ header {
     margin: 10px;
 }
 
+/* ADMIN LOGIN PAGE */
+.adminLoginPage {
+    height: calc(100vh - 86px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.adminLoginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 30px;
+    height: 50%;
+    width: 50%;
+    padding: 20px;
+}
+.adminLoginForm .title {
+    color: rgb(182, 7, 65);
+    font-size: 2rem;
+    margin-top: 0;
+}
+.adminLoginForm .username, .adminLoginForm .password {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.adminLoginForm label {
+    margin: 10px auto;
+}
+.adminLoginForm input {
+    border-radius: 30px;
+    text-align: center;
+    padding: 10px 10px;
+    font-family: 'Nunito Sans';
+    font-size: 1rem;
+}
+
 @media (max-width: 1370px) {
     /* HEADER */
     header {
@@ -498,5 +538,10 @@ header {
     }
     .adminRecipePageForm .submitButton {
         margin-bottom: 10px;
+    }
+    
+    /* ADMIN LOGIN PAGE */
+    .adminLoginPage {
+        height: calc(100vh - 289px);
     }
 }

@@ -1,3 +1,8 @@
+const bcrypt = require("bcrypt");
+
+const salt = bcrypt.genSaltSync(10);
+console.log(bcrypt.hashSync("XIIIthebest", salt));
+
 const dataMapper = require("../dataMapper");
 
 const adminController = {
@@ -19,7 +24,7 @@ const adminController = {
       });
     });
   },
-  getAdminAddRecipePage: (req, res) => {
+  getAddRecipePage: (req, res) => {
     res.render("adminAddRecipePage");
   },
   postRecipe: (req, res) => {
@@ -122,6 +127,31 @@ const adminController = {
       }
 
       res.redirect("/admin");
+    });
+  },
+  getLoginPage: (req, res) => {
+    res.render("adminLoginPage");
+  },
+  postLoginPage: (req, res) => {
+    const username = req.body.username;
+    const password = req.body.password;
+
+    dataMapper.getLoginUsername(username, (err, result) => {
+      if (err) {
+        return res.send(`Les identifiants de connexion sont incorrects.`);
+      }
+
+      const foundUser = result.rows[0];
+
+      if (foundUser === undefined) {
+        return res.send(`Les identifiants de connexion sont incorrects.`);
+      }
+
+      if (bcrypt.compareSync(password, foundUser.password)) {
+        request.session.user = user;
+
+        res.redirect("/admin");
+      }
     });
   },
 };
