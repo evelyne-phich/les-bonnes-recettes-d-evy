@@ -152,7 +152,7 @@ const adminController = {
     });
   },
   logout: (req, res) => {
-    req.session.user = undefined;
+    req.session.destroy();
 
     res.redirect("/");
   },
