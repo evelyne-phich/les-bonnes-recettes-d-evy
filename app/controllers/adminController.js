@@ -1,4 +1,5 @@
 const bcrypt = require("bcrypt");
+const { request } = require("express");
 
 const dataMapper = require("../dataMapper");
 
@@ -149,6 +150,11 @@ const adminController = {
         res.redirect("/admin");
       }
     });
+  },
+  logout: (req, res) => {
+    req.session.user = undefined;
+
+    res.redirect("/");
   },
 };
 

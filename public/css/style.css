@@ -45,7 +45,7 @@ header {
     display: flex;
     align-items: center;
 }
-.homeButton, .searchButton {
+.homeButton, .searchButton, .logoutButton {
     width: 54px;
     height: 54px;
     background: rgb(182, 7, 65);
@@ -62,7 +62,7 @@ header {
     border-radius: 0 10px 10px 0;
     border-left: 1px solid rgb(182, 7, 65);
 }
-.homeButton:hover, .searchButton:hover {
+.homeButton:hover, .searchButton:hover, .logoutButton:hover {
     background: white;
     color: rgb(182, 7, 65);
 }
