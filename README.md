@@ -21,3 +21,16 @@ https://devcenter.heroku.com/articles/deploying-nodejs
 - heroku pg:backups:capture --app les-bonnes-recettes-d-evy
 - heroku pg:backups:download --app les-bonnes-recettes-d-evy
 - docker compose exec db pg_restore --verbose --clean --no-acl --no-owner -U evy -v -d les-bonnes-recettes-d-evy < ~/latest.dump  
+
+# How to run projects locally with WSL2
+
+1. cd ~/workspace/fred
+2. npm run devops:ip
+3. copy the line with the port 3000, it should looks like
+
+```
+netsh interface portproxy add v4tov4 listenport=3000 listenaddress=0.0.0.0 connectport=3000 connectaddress=172.28.110.114
+```
+
+4. Open powershell as an administrator
+5. Paste the previous line to be able to access to the application from "http://localhost:3000"
