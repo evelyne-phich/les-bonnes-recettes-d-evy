@@ -5,6 +5,7 @@ services:
       context: ./docker/db
     volumes:
       - ./docker/db/init:/docker-entrypoint-initdb.d
+      - ./docker/db/data:/var/lib/postgresql/data
     environment:
       POSTGRES_DB: les-bonnes-recettes-d-evy
       POSTGRES_PASSWORD: les-bonnes-recettes-d-evy
