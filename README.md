@@ -15,3 +15,9 @@ psql -Atx <connection_string>
 https://devcenter.heroku.com/articles/deploying-nodejs
 
 - git push heroku main
+
+# How to import heroku's DB locally
+
+- heroku pg:backups:capture --app les-bonnes-recettes-d-evy
+- heroku pg:backups:download --app les-bonnes-recettes-d-evy
+- docker compose exec db pg_restore --verbose --clean --no-acl --no-owner -U evy -v -d les-bonnes-recettes-d-evy < ~/latest.dump  
